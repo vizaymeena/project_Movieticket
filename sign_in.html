@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="sign_in.css">
+    <!-- Aos sheet -->
+   
+    
+</head>
+<body id="page1">
+    <!-- container for login credentials  -->
+    <div class="container"  data-tilt >
+        <form class="sign_in_form">
+            <h2>Sign In</h2>
+            <!-- username informations -->
+            <div class="cred">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <!-- password informations -->
+            <div class="cred">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <!-- action functionable buttons -->
+            <div class="actions">
+                <div>
+                     <!-- singin(); function-->
+                <button onclick="signin()" type="submit"  >Sign In</button>
+               </div>
+               <div>
+                <!-- Forget password(); function -->
+                <a href="#">Forgot Password?</a>
+               </div>
+            </div>
+            <div><p id="newacc"><a href="sign_up.html">Don't have an account ?</a></p></div>
+        </form>
+    </div>
+
+    <!-- Vanta Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <!-- Tilt Js -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+   
+   
+
+    <!-- sing in js -->
+    <script src="sign_in.js" > </script>
+</body>
+</html>

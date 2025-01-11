@@ -1,0 +1,185 @@
+/* Considered body style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#page1 {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* container for credentials  */
+.container {
+
+    position: relative;
+    z-index: 1;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 10px 2px rgba(179, 28, 25, 0.6);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    opacity: 0.7;
+}
+.container::after{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    
+    /* Adjusted border styling */
+    border-left: 2px solid blue; 
+    border-top: 2px solid blue;
+    border-right: 2px solid red;
+    border-bottom: 2px solid red;
+    border-radius: 18px; /* rounded corners for the pseudo-element */
+    z-index: -1;
+    box-shadow: -5px -5px 10px 2px rgba(83, 83, 180, 0.354);
+}
+
+/* container for credentials Ends. */
+
+/* Log in title */
+.sign_in_form h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+
+/* lables and inputs container */
+.cred {
+    margin-bottom: 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.cred label {                 /* username and password lables */
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #240e76;
+}
+
+.cred input {                /* username and password inputs */
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: rgba(24, 17, 167, 0.2);
+    border: 1px solid rgba(108, 120, 112, 0.952);
+    border-radius: 8px;
+    color: whitesmoke;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+
+}
+
+.cred input:focus {                            /* onclick input effects */
+    border-color:rgb(200, 203, 200);
+    box-shadow: 5px 5px 10px 2px white;
+}
+
+/* functions buttons */
+.actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.actions button {
+    padding: 12px 25px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: 1s all ease;
+    
+}
+
+.actions button:hover {
+    transform: scale(1.05);
+    color: whitesmoke;
+    background-color: green;
+    border: 2px solid white;
+    outline: none;
+}
+
+.actions a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.actions a:hover {
+    color: #00f;
+}
+#newacc{
+    margin-top: 1em;
+}
+#newacc a{
+    cursor: pointer;
+    color:white;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+#newacc a:hover{
+    color: blue;
+}
+
+
+
+
+/* Sign in main container gradient glow */
+.container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid transparent;
+    border-radius: 18px;
+    background: linear-gradient(45deg, #65648e, #591992, #477896d0, #08252b);
+    background-size: 400% 400%;
+    animation: gradientglow 6s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientglow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
