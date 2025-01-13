@@ -120,7 +120,7 @@ body {
     bottom: -10px;
     border: 2px solid transparent;
     border-radius: 18px;
-    background: linear-gradient(45deg, #3532e0, #65388f, #87254bd0, #1088a0);
+    background: linear-gradient(45deg, #3532e0, #515ca5, #256a87d0, #347180);
     background-size: 400% 400%;
     animation: gradientglow 6s ease infinite;
     z-index: -1;
