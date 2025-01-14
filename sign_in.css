@@ -91,6 +91,20 @@
     text-align: center;
 
 }
+/* Placeholder Editing --------------------------------------------------- PLACEHOLDER TEXT */
+
+.input_bg_color::placeholder{                  /* change text-color of placeholder written text */
+    color: red;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+.input_bg_password::placeholder{
+    color: red;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+
+}
+
 
 .cred input:focus {                            /* onclick input effects */
     border-color:rgb(200, 203, 200);

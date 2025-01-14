@@ -14,30 +14,31 @@
 
             <div class="details">  <!-- Username field -->
                 <label class="label" > Username :</label>
-                <input type="text" class="input" id="username" placeholder="Enter your username" required>
+                <input type="text" class="input" id="username" placeholder="Enter your username"  >
             </div>
 
             <div class="details">  <!-- Email field -->
                 <label class="lable" > Email :</label>
-                <input type="email" class="input" id="email" placeholder="Enter your email" required>
+                <input type="text" class="input" id="email" placeholder="Enter your email" >
             </div>
 
             <div class="details">   <!-- Password field -->
                 <label class="label" > Password :</label>
-                <input type="password" class="input" id="password" placeholder="Enter your password" required>
+                <input type="text" class="input" id="password" placeholder="Enter your password" >
             </div>
 
             <div class="details">   <!-- Confirm Password field -->
                 <label class="label" > Confirm Password :</label>
-                <input type="password" class="input" id="confirm_password" placeholder="Confirm your password" required>
+                <input type="text" class="input" id="confirm_password" placeholder="Confirm your password" >
             </div>
 
             <div class="actions">    <!-- function container -->
-                <button id="btn" type="submit" onclick="singup()">Sign Up</button>
+                <button id="btn" type="submit" onclick=" return signup()">Sign Up</button>
 
-                <p class="acc_mssg">Already have an account? <a href="sign_in.html">Sign In</a></p>  <!-- Login reference link -->
+                <p class="acc_mssg">Already have an account? <a href="sign_in.html">Login</a></p>  <!-- Login reference link -->
             </div>
         </form>
     </div>
+    <script src="sign_up.js"></script>
 </body>
 </html>

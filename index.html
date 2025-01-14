@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Movie Ticket </title>
-    <!-- Embd style-->
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Ticketing</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <header class="header">
+    <div class="logo">🎥 MovieMania</div>
+    <nav class="nav">
+      <a href="#movies">Movies</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
 
-     <div id="container">                      <!-- Main container  -->
+  <section class="hero">
+    <h1>Welcome to MovieMania</h1>
+    <p>Book your tickets for the latest movies in just a few clicks!</p>
+    <button class="cta-button">Book Now</button>
+  </section>
 
-         <div class="book">
-             <div class="left">
-                 <div></div>
-             </div>
-             <div class="right">
-                 <div></div>
-             </div>
-             
-         </div>
+  <section id="movies" class="movies">
+    <h2>Now Showing</h2>
+    <div class="movie-grid">
+      <div class="movie-card">
+        <img src="movie1.jpg" alt="Movie 1">
+        <h3>Movie 1</h3>
+        <button>Book Ticket</button>
+      </div>
+      <div class="movie-card">
+        <img src="movie2.jpg" alt="Movie 2">
+        <h3>Movie 2</h3>
+        <button>Book Ticket</button>
+      </div>
+      <div class="movie-card">
+        <img src="movie3.jpg" alt="Movie 3">
+        <h3>Movie 3</h3>
+        <button>Book Ticket</button>
+      </div>
     </div>
-    
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 MovieMania. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>

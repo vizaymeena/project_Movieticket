@@ -45,6 +45,14 @@ body {
     margin-bottom: 5px;
     text-transform: uppercase;
 }
+/* Placeholder Text color  --------------------------------------------------- PLACEHOLDER TEXT */
+
+.textcolor::placeholder{
+    color: red;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
 
 .input {
     width: 100%;
