@@ -5,46 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie Ticketing</title>
   <link rel="stylesheet" href="index.css">
+
+  <!-- Google font link stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap" rel="stylesheet"> 
+  
+  <!-- Aos Link sheet -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
-  <header class="header">
-    <div class="logo">🎥 MovieMania</div>
-    <nav class="nav">
-      <a href="#movies">Movies</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact Us</a>
+<header id="navbar">
+  <!-- Movie logo and heading -->
+  <div class="logo"> 
+    <h1 data-aos="zoom-in-right" data-aos-duration="2000"><img class="websiteLogo" src="./images/logo.png" alt="WebsiteLogo">Entertainment</h1> 
+       <!-- Navbar -->
+    <nav class="nav"  data-aos="zoom-in-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="2500">
+      <a href="#home"> Home </a>
+      <a href="#movies"> Ongoing Movies </a>
+      <a href="#pricing"> Upcoming Movies </a>
+      <a href="#sign_up.html" class="signup"> Register </a>
     </nav>
-  </header>
+  </div>
+</header>
+<main>
+  <section id="ongoing-movies">
+    <div class="hero">
+      <div class="show-ongoing"><p >ONGOING SHOW</p></div>                   <!-- Show ongoing left -->
+          <div class="pushpa_left">
+            <p class="pushpa-image"> <img class="pushpa2" height="390px" width="300px" src="https://wallpapercave.com/dwp2x/wp14908185.webp" alt=""><i id="btn-play" class="fa-solid fa-play"></i></p> 
+            <h3>Pushpa 2</h3>
+            <h4> Cast </h4>
+            <p>Allu Arjun,</p>
+            <p>Rashmika Mandanna,</p>
+            <h5 class="book-info">BOOK SHOW</h5>                                               <!-- Book-Show -->
+          </div>                                                            <!--  Pushpa-Left  -->
+      </div>                                                                  <!-- Hero-Div -->
 
-  <section class="hero">
-    <h1>Welcome to MovieMania</h1>
-    <p>Book your tickets for the latest movies in just a few clicks!</p>
-    <button class="cta-button">Book Now</button>
-  </section>
+      <div class="show-ongoing-right">                                                          <!-- Show ongoing right -->
+        <div class="pushpa-right"> <video src=""> </video> </div>
+      </div>
+      
+     
 
-  <section id="movies" class="movies">
-    <h2>Now Showing</h2>
-    <div class="movie-grid">
-      <div class="movie-card">
-        <img src="movie1.jpg" alt="Movie 1">
-        <h3>Movie 1</h3>
-        <button>Book Ticket</button>
-      </div>
-      <div class="movie-card">
-        <img src="movie2.jpg" alt="Movie 2">
-        <h3>Movie 2</h3>
-        <button>Book Ticket</button>
-      </div>
-      <div class="movie-card">
-        <img src="movie3.jpg" alt="Movie 3">
-        <h3>Movie 3</h3>
-        <button>Book Ticket</button>
-      </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2025 MovieMania. All Rights Reserved.</p>
-  </footer>
+
+</main>
+      
+
+
+
+
+
+
+    
+
+
+
+
+    <!-- Vanila Tilt -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
+
+    <!-- Aos Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Home Page Javascript File -->
+    <script src="index.js"></script>
 </body>
 </html>
