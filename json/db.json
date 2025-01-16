@@ -1,0 +1,17 @@
+{
+
+    "Movie":[
+
+        {
+            "Name":"Vijay",
+            "Age":"23",
+            "batch": "P-43"
+        },
+        {
+            "Name":"Himanshu",
+            "Age":"23",
+            "batch":"P-43"
+        }
+    ]
+
+}

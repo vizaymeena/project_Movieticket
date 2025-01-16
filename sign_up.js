@@ -18,7 +18,11 @@ let signup=()=>{
     let err_c_pass = document.querySelector("#confirm_password")                      //     Confirm-Pass  \\
 
 
-
+    // saving user details on browser 
+    localStorage.setItem("username",inp_username);
+    localStorage.setItem("email",inp_email);
+    localStorage.setItem("password",inp_password);
+    localStorage.setItem("confirmpass",inp_confirmpass);
 
     
     /* Specifying rules for sign up form */
@@ -100,13 +104,13 @@ let signup=()=>{
         e.placeholder="";
         e.style.borderColor="";
         e.classList.remove("textcolor")
+        return false;
     })
-   
+
+      
     location.href="sign_in.html"
 
-    // saving user details on browser 
-    localStorage.setItem("username",inp_username);
-    localStorage.setItem("email",inp_email);
-    localStorage.setItem("password",inp_password);
+    return false;
+ 
 
 }
