@@ -4,4 +4,25 @@ let fetchData=async()=>{
 
     let data = await res.json()
     console.log(data)
+
+
+    let show = document.querySelector("#display")
+
+    data.map((e)=>{
+
+        show.innerHTML+=`
+        
+       
+        
+        <tr >
+
+        <td class="tr2"> ${e.name} </td>
+        <td class="tr2"> ${e.age} </td>
+        <td class="tr2"> ${e.batch} </td>
+        
+        </tr>
+        
+        `
+    })
 }
+

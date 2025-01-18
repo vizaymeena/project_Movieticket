@@ -3,13 +3,23 @@
     "Movie":[
 
         {
-            "Name":"Vijay",
-            "Age":"23",
+            "name":"Vijay",
+            "age":"23",
             "batch": "P-43"
         },
         {
-            "Name":"Himanshu",
-            "Age":"23",
+            "name":"Himanshu",
+            "age":"23",
+            "batch":"P-43"
+        },
+        {
+            "name":"Yash",
+            "age":"23",
+            "batch": "P-43"
+        },
+        {
+            "name":"Ragini",
+            "age":"23",
             "batch":"P-43"
         }
     ]

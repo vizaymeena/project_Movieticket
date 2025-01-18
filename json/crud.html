@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: rgb(45, 16, 163);
+        }
+        #display{
+            background-color: rgba(34, 109, 171, 0.322);
+            border-radius: 20px;
+        }
+        .row1{
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: -5px 0px 10px 1px; 
+            transition: 1s all ease;
+        }
+        .row1:hover{
+            transform: scale(1.1);
+            background-color: cadetblue;
+            color: whitesmoke;
+        }
+    </style>
 </head>
-<body>
+<body onload="fetchData()">
+    <table cellspacing="50" cellpadding="10" border="5" id="display">
+        <tr > 
+            <th class="row1"> Name </th>
+            <th class="row1"> Age </th>
+            <th class="row1"> Batch </th>
+           </tr>
+    </table>
     
 
     <script src="crud.js"></script>
