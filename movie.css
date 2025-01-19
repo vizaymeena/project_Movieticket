@@ -1,0 +1,276 @@
+/* Montserrat Google font via import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap');
+
+/* color codes  red */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hamburger{
+    display: none;
+}
+#header{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.m-heading{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    margin-left: 20px;
+    
+}
+
+.nav{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: rgb(3, 21, 22);
+}
+
+.navlinks{
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    overflow: hidden;
+    display:flex;
+    gap: 30px;
+}
+.navlinks a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 20px;
+    color: rgb(196, 185, 149);
+    transition: 1s all ease;
+
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.navlinks a:hover{
+    color: blue;
+    transform: scale(1.2);
+}
+.navlinks a::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: rgb(142, 13, 63);
+    
+    transform: translateX(-100%);
+    transition: transform 0.7s ease;
+    
+}
+.navlinks a:hover::after{
+    transform: translateX(0%);
+}
+
+.owl{
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+}
+.owl{
+   margin-right: 20px;
+   display: flex;
+   gap: 20px;
+   justify-content: center;
+   align-items: center;
+}
+
+#search,
+#signup{
+    font-size: 25px;
+    color: rgb(237, 237, 230);
+    transition: 1s all ease;
+}
+#search:hover,
+#signup:hover{
+    transform: scale(1.3);
+}
+#signup:hover{
+    color: rgb(83, 83, 160);
+
+}
+
+
+
+/* Spicy slider */
+
+.container {
+  width: 100%;
+  min-height: 584px;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+
+}
+
+.container img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.home-text{
+
+  width: 50%;
+  height: 90vh;
+  margin-left: 1em;
+  font-size: 2em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.home-text div span{
+  color: yellow;
+}
+.home-text h1{
+  font-size: 50px;
+  color: white;
+}
+.home-text p{
+  font-size: 20px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: white;
+ 
+}
+.home-text p span{
+  color: orange;
+}
+
+.btn a{
+  text-decoration: none;
+}
+/* Play button */
+.btn-play{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  font-size: 40px;
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+  padding: 10px;
+  color: orangered;
+  border: 2px solid orangered ;
+  border-radius: 50%;
+ 
+  background-color: white;
+  box-shadow: 0px 0px 20px 2px ;
+  transition: 1s all ease;
+}
+.btn-play:hover{
+  color: white;
+  background-color: orangered;
+  border: 2px solid white;
+  transform: scale(0.7);
+}
+/* Play button end */
+
+/* Book Button */
+.btn-book{
+  display: inline-block;
+  background-color: yellow;
+  color: black;
+  font-size: 25px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  transition: 1s all ease;
+}
+.btn-book:hover{
+  transform: scale(0.8);
+}
+
+/* swiper Pagination */
+.swiper-pagination-bullet{
+  width: 20px !important; 
+  height: 5px !important;
+  background-color: rgb(207, 83, 16) !important; 
+  border-radius: 20px !important;
+}
+
+/* Movies section  */
+#movies{
+  width: 100%;
+  height: fit-content;
+}
+ .heading {
+  color: black;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  border-bottom: 2px solid red;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+/* Grid Container  */
+.movies-container{
+  max-width: 968px;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.box .box-img{
+  width: 100%;
+  height: 270px;
+}
+/* grid items */
+.box .box-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  object-position: center;
+  transition: 0.6s all linear;
+}
+.box .box-img img:hover{
+  transform: translateY(-5%);
+}
+.box h2{
+  margin-top: 0.3em;
+  font-size: 1.3em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: black;
+  
+}
+.box span{
+  font-size: 1.1em;
+  margin-top: 0.4em;
+ 
+}
+
+/* section 2  */
