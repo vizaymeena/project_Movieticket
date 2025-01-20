@@ -9,6 +9,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
      <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
   
 
 </head>
@@ -30,7 +32,7 @@
             <!-- Search Sign up -->
             <div class="owl"> 
                   <a href=""><i id="search" class="fa-solid fa-magnifying-glass"></i></a> <!-- search -->
-                  <a href="./sign_in.html"><i id="signup" class="fa-solid fa-user"></i></a>              <!-- sign-in -->
+                  <a href=""><i id="signup" class="fa-solid fa-user"></i></a>              <!-- sign-in -->
             </div>
         </nav> 
     </header>
@@ -103,7 +105,7 @@
      </section>
 <!-- Home Section Ends -->
 
-<!-- Movies Section -->
+<!-- Section 1 -->
 
      <section id="movies">
       <h2 class="heading">Opening This Week</h2>
@@ -189,18 +191,48 @@
           <h2>Moana 2</h2>
           <span>120Min | Action,Sci-fic</span>
         </div>
-  
       </div>
-
      </section>  <!-- Movies Section End -->
 
+     <!-- Section 2 -->
+     <section id="up_coming">
+      <h2 class="heading">Upcoming</h2>
+      <!-- Swiper -->
+      <div class="swiper mySwiper1">
+          <div class="swiper-wrapper wrap2">
+              <div class="swiper-slide slide2">
+                  <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/09/solo-leveling-season-2-release-window-art.jpg" alt="Slide 1">
+              </div>
+              <div class="swiper-slide slide2">
+                  <img src="https://rare-gallery.com/uploads/posts/340777-Tanjiro-Kamado-Tanjirou-Demon-Slayer-Kimetsu-no-Yaiba-Anime-Nezuko-Kamado-Zenitsu-Agatsuma-Inosuke-Hashibira.jpg" alt="Slide 2">
+              </div>
+              <div class="swiper-slide slide2">
+                  <img src="https://m.media-amazon.com/images/S/pv-target-images/83a15e35dec3984d13ea6eb76857106b3bf03470f6f8f571de2464a4cd3b21c2._SX1080_FMjpg_.jpg" alt="Slide 3">
+              </div>
+              <div class="swiper-slide slide2">
+                  <img src="https://www.hindustantimes.com/ht-img/img/2024/11/25/1600x900/Blue_Lock_s2_e9_1732553822632_1732553826094.jpg" alt="Slide 4">
+              </div>
+              <div class="swiper-slide slide2">
+                  <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/11/shadow-running-to-power-space-colony-ark-in-sonic-the-hedgehog-3.jpg" alt="Slide 5">
+              </div>
+          </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+           <!-- Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+      </div>
+  </section>
+    
 
-    </main>
 
+  </main>
 
+  
    <!-- Swiper JS -->
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Swiper JS -->
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   
   
  <!-- Project js -->
  <script src="movie.js"></script>
