@@ -7,6 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+  font-family: "Montserrat","Poppins","Bodoni","Garamond";
+}
 .hamburger{
     display: none;
 }
@@ -211,10 +214,15 @@
 
 /* swiper Pagination */
 .swiper-pagination-bullet{
-  width: 20px !important; 
-  height: 5px !important;
-  background-color: rgb(207, 83, 16) !important; 
-  border-radius: 20px !important;
+  width: 15px !important; 
+  height: 15px !important;
+  background-color: rgb(255, 245, 245) !important; 
+  border-radius: 50% !important;
+  transition: 1s all ease !important;
+}
+.swiper-pagination-bullet-active:hover{
+  background-color: orangered !important;
+  transform: scale(1.5) !important;
 }
 
 /* Movies section  */
@@ -236,32 +244,133 @@
 }
 
 /* Grid Container  */
+.box{
+  border-bottom: 2px solid green;
+  margin-bottom: 1em;
+}
 .movies-container{
   max-width: 968px;
   display: grid;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+  grid-template-columns: repeat(auto-fit,minmax(280px,auto));
   gap: 1rem;
   margin-top: 2rem;
 }
 .box .box-img{
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 270px;
+  border: 2px solid black;
+  overflow: hidden;
+  background-color: blue;
+  /* transition: 1s all ease; */
 }
+/* .box-img::after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(230, 239, 230, 0.283);
+  height: 0%;
+  width: 20%;
+  transition:1s all ease;
+}
+.box-img:hover::after{
+  height: 100%;
+  width: 100%;
+} */
+
+/* Default style of button and title starts */
+.span-minutes{
+  color: rgb(18, 4, 141);
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.span-sepreater{
+  color: red;
+  font-weight: 900;
+  margin-bottom: 1em;
+}
+.span-genere{
+  color: rgb(255, 0, 128);
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+/*preBook button*/
+.btn-prebook{ 
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: aliceblue;
+  color: rgb(100, 13, 51);
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.6s linear;
+  cursor: pointer;
+}
+.btn-prebook:hover{ /*preBook hover */
+  background: yellow;
+  color: black;
+}
+.btn-notifyme{
+  border-radius:10px;
+  padding: 8px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  cursor: pointer;
+  transition: 0.6s linear;
+}
+.btn-notifyme:hover{
+background-color: orangered;
+color: white;
+}
+/* Bell-icon */
+.bell-icon{     
+  color: red;
+  transition: 1s linear;
+  font-weight: 900;
+}
+.btn-notifyme:hover .bell-icon{   /* Bell icon gets change when btn-nofityme is hovered */
+  color:aliceblue;
+}
+/* Default style ends */
+
 /* grid items */
 .box .box-img img {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0; 
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 20px;
   object-position: center;
-  transition: 0.6s all linear;
+  transition: 1s all ease;
+  cursor: pointer;
 }
 .box .box-img img:hover{
-  cursor: pointer;
-  transform: translateY(-5%) scale(1.02);
-  box-shadow: 5px -2px 20px rgb(93, 109, 93);
+  transform:scale(1.3);
+
+}
+.title-upcoming{
+  width: 100px;
+  text-align: center;
+  height: fit-content;
+  padding: 4px;
+  background-color: red;
+  color: white;
+  font-size: small;
+  letter-spacing: 2px;
+  font-weight: 900;
 }
 .box h2{
   margin-top: 0.3em;
@@ -276,6 +385,26 @@
   margin-top: 0.4em;
  
 }
+/* Heart-icon */
+.p-heart{
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 2px;
+  font-size: 2em;
+  cursor: pointer;
+} 
+/* classlist for heart-icon */
+.p-heart i {
+  transition: all 0.3s ease; 
+}
+/* heart hover */
+.p-heart:hover i {
+  font-family: "Font Awesome 6 Free"; /* Required for Font Awesome solid icons */
+  font-weight: 900; 
+  content: "\f004"; /* Font Awesome heart code */
+} 
+
 /* Section 2 */
 
 #up_coming {
@@ -285,7 +414,8 @@
 }
 
 .mySwiper1 {
-  height: 60%;
+ 
+  height: 65%;
   width: 100%;
   margin-top: 0.5em;
 }
@@ -294,33 +424,197 @@
   display: flex;
   height: 100%;
   width: 100%;
+  margin-top: 1.2em;
 }
 
 .slide2 {
-  
   font-size: 18px;
   color: black;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   position: relative;
   z-index: 1;
+  overflow: hidden; /* hover image overflow hidden */ 
+ 
+}
+.slide2 h1{
+  margin-top: 50%;
+  color: black;
+  background: #f4efefbb;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .slide2 img {
   position: absolute;
   z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s all ease; /* scaling smooth transition */
+  
+}
+.slide2 p{
+  width: fit-content;
+  background-color: orangered;
+  color: white;
+  border: 5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+/* Hover */
+.slide2 img:hover{
+  transform: scale(1.1);
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: white; /* Button color */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: orangered; /* Hover color */
+}
+
+/* Section 3 Trending Section */
+
+.Myswiper3 {
+  width: 100%;
+  height: 100%;
+}
+
+.slide3 {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide3 img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.swiper-button-next,
-.swiper-button-prev {
-  color: #ff4500; /* Button color */
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: #ff6347; /* Hover color */
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+/* slider 3 */
+/* Container for the swiper */
+.wrap3 {
+  display: grid;
+  gap: 20px; /* Adjust spacing between slides */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible columns */
+  cursor: pointer;
+}
+
+/* Individual slide */
+.slide3 {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto; /* Organizes content within each slide */
+  gap: 0; /* Adjust spacing between elements */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Background for better visibility */
+}
+
+/* Image in the slide */
+.slide3 img {
+  margin: auto;
+  width: 50%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Rating section */
+.Rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Movie info */
+.movie-info {
+  display: grid;
+  gap: 5px;
+}
+
+/* Buttons at the bottom */
+.trending-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto; /* Push buttons to the bottom */
+}
+
+.trending-btn button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff5733;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+.book-trending{
+  background-color: yellow !important;
+}
+.trending-btn button a{
+  text-decoration: none;
+  color: white;
+}
+.watch-t2{
+  margin-right: 1.5em;
+}
+.watch-t3{
+  margin-right: 2.8em;
+}
+.watch-t4{
+  margin-right: 4.3em;
+}
+.watch-t5{
+  margin-right: 6em;
+ 
+}
+.trending-btn button:hover {
+  background-color: #c4411e;
 }
