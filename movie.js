@@ -31,7 +31,7 @@ var swiper1 = new Swiper('.mySwiper1', {
 var progressCircle = document.querySelector(".autoplay-progress svg");
 var progressContent = document.querySelector(".autoplay-progress span");
 var swiper3 = new Swiper(".mySwiper3", {
-  spaceBetween: 30,
+  spaceBetween: 10,
   centeredSlides: true,
   // autoplay: {
   //   delay: 2500,
@@ -54,16 +54,22 @@ var swiper3 = new Swiper(".mySwiper3", {
 });
 
 
-/* Typed Js */
+/* Typed Js Demo */
 var typed1 = new Typed('#element', {
   strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
   typeSpeed: 50,
 });
 
-/* Heart Icon js */
-const pHeart = document.getElementById('p-heart');
+/* Toogle waves */
+let playbutton = document.querySelector('.btn-play');
 
-// Track click state
+playbutton.addEventListener('mouseenter', () => {
+  playbutton.classList.add('nowaves'); 
+});
+
+playbutton.addEventListener('mouseleave', () => {
+  playbutton.classList.remove('nowaves'); 
+});
 
 
 
