@@ -9,16 +9,16 @@
 }
 body{
   font-family: "Montserrat","Poppins","Bodoni","Garamond";
-  background: black;
+  /* background: black; */
 }
 
 .hamburger{
     display: none;
 }
 #header{
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1000; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -320,7 +320,8 @@ body{
 #movies{
   width: 100%;
   height: fit-content;
-  background:linear-gradient(to right,rgb(19, 7, 7),rgb(155, 146, 146));
+  /* background:linear-gradient(to right,rgb(126, 6, 6),rgb(10, 9, 9)); */
+  background: linear-gradient(to right,rgb(138, 78, 78),black);
   color: red;
 }
  .heading {
@@ -361,16 +362,16 @@ body{
   height: 270px;
   border: 2px solid black;
   overflow: hidden;
-  background-color: blue;
+  background-color: yellow;
   /* transition: 1s all ease; */
 }
 .box h2{
   margin-top: 0.3em;
-  font-size: 1.3em;
+  font-size: 1.5em;
   letter-spacing: 3px;
   text-shadow: 1px 1px white;
   text-transform: uppercase;
-  color: black;
+  color: orangered;
 }
 .title-upcoming{
   width: 100px;
@@ -413,6 +414,9 @@ body{
   border:none;
   transition: 0.6s linear;
   cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 750;
+  letter-spacing: 1px;
 }
 .btn-prebook:hover{ /*preBook hover */
   background: yellow;
@@ -423,8 +427,12 @@ body{
   padding: 8px;
   margin-bottom: 1em;
   margin-top: 1em;
+  margin-left: 7em;
   border: none;
   cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 750;
+  letter-spacing: 1px;
   transition: 0.6s linear;
 }
 .btn-notifyme:hover{
@@ -460,7 +468,6 @@ color: white;
 }
 .box .box-img img:hover{
   transform:scale(1.3);
-
 }
 
 .box span{
@@ -489,286 +496,191 @@ color: white;
 } 
 
 /* Section 2 */ 
-/* Anime movies section */
-
-#up_coming {
+#trending_shows{
+  height: 100vh;
+  width: 100%;
+  background:linear-gradient(to right,rgb(145, 46, 27),rgb(9, 4, 4));
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 70vh;
-  width: 90%;
-  margin: auto;
-  background: linear-gradient(to right,rgb(109, 8, 8),rgb(37, 37, 94));
+  flex-wrap: wrap;
 }
-#up_coming .heading{
-  margin-bottom: 1em;
-}
-.mySwiper1 {
- 
-  height: 65%;
-  width: 100%;
-  margin-top: 0.5em;
-}
-
-.wrap2 {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  margin-top: 1.2em;
-}
-
-.slide2 {
-  font-size: 18px;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  overflow: hidden; /* hover image overflow hidden */ 
- 
-}
-.slide2 h1{
-  margin-top: 50%;
-  color: black;
-  background: #f4efefbb;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.slide2 img {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 1s all ease; /* scaling smooth transition */
-  
-}
-.slide2 p{
-  width: fit-content;
-  background-color: orangered;
+.trending_heading{
+  width: 60%;
+  margin: 0 auto;
+  border-bottom: 2px solid red ;
   color: white;
-  border: 5px;
-  font-weight: 600;
-  letter-spacing: 2px;
 }
-/* Hover */
-.slide2 img:hover{
-  transform: scale(1.1);
+.trendingSwiper {
+  width: 80%;
+  height: 70%;
 }
-.swiper-button-next,
-.swiper-button-prev {
-  color: white; /* Button color */
+.trendingWraper{
+  margin-top: 1em;
 }
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: orangered; /* Hover color */
-}
-
-/* Section 3 Trending Section */
-
-.Myswiper3 {
-  width: 100%;
-  height: 100%;
-}
-
-.slide3 {
+.trending_slides {
   text-align: center;
   font-size: 18px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: yellow;
+  
 }
-
-.slide3 img {
+.trending_slides img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-
-.autoplay-progress {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  z-index: 10;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--swiper-theme-color);
-}
-
-.autoplay-progress svg {
-  --progress: 0;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  stroke-width: 4px;
-  stroke: var(--swiper-theme-color);
-  fill: none;
-  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-  stroke-dasharray: 125.6;
-  transform: rotate(-90deg);
-}
-
-/* slider 3 */
-/* Container for the swiper */
-.wrap3 {
-  display: grid;
-  gap: 20px; /* Adjust spacing between slides */
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible columns */
-  cursor: pointer;
-}
-
-/* Individual slide */
-.slide3 {
-  display: grid;
-  grid-template-rows: auto auto 1fr auto; /* Organizes content within each slide */
-  gap: 0; /* Adjust spacing between elements */
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff; /* Background for better visibility */
-}
-
-/* Image in the slide */
-.slide3 .img {
-  margin: auto;
-  width: 800px;
-  height: 400px;
-  border-radius: 10px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden; 
-}
-
-.slide3 .img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-
-  z-index: -1; 
+  border-radius: 5%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   transition: 1s all ease;
 }
-.slide3 .img img:hover{
-  transform: scale(1.3);
+.trending_slides img:hover{
+  transform: scale(1.1);
 }
-.movie-info p{
-  width: 80%;
-  margin: 5px auto;
-  background-color: #1f1e1e8f;
-  color: whitesmoke;
-}
-
-
-/* Rating section */
-.Rating {
+/* Plus Function Style starts */
+.hovericon_plus{
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  border: 2px solid white;
+  background-color: #1010108e;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 900;
   display: flex;
   justify-content: center;
-  gap: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.rating-star1,
-.rating-star2,
-.rating-star3,
-.rating-star4
-{
-  color: yellow;
-}
-.rating-star5{
-  color: yellow;
-}
-
-/* Movie info */
-.movie-info {
-  display: grid;
-  gap: 5px;
-}
-
-/* Buttons at the bottom */
-.trending-btn {
-  display: flex;
-  justify-content: space-between;
-  margin-top: auto; /* Push buttons to the bottom */
-}
-
-.trending-btn button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
+  align-items: center;
   cursor: pointer;
-  font-weight: bold;
+  transition: color 1s ease;
 }
-/* Trending movies btn-book */
-.book-trending{
-  background-color: rgba(0, 0, 0, 0.829);
+.plusicon{
+  transition: transform 1s ease;
 }
-.trending-btn button a{
-  text-decoration: none;
+ /* + rotation 360deg */  
+.hovericon_plus:hover .plusicon{
+   transform: rotate(360deg);     
+}
+/* Plus Icon Hover color on div */
+.hovericon_plus:hover{
+  background-color: red;
+   color: white;
+}
+/* Plus:hover ends */
+
+
+/* div2 */
+.Movie{
+  margin-top: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+.moviename{
+  color: rgb(253, 164, 179);
+  font-family: "Macondo", serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 750;
+  letter-spacing: 4px;
+  text-shadow: 1.5px 1.5px black ;
+}
+.ratings i{
+  color: yellow;
+}
+.duration{
+  color: rgb(181, 9, 37);
+  font-weight: 600;
+}
+.divider{
+  color: blue;
+  font-weight: 900;
+}
+.genere{
+  color: rgb(34, 189, 20);
+  font-weight: 600;
+}
+/* Buttons */
+.trending_btn{
+  display: flex;
+  gap: 100px;
+}
+.trend_book-btn{
+  margin-bottom: 0.5em;
+  padding: 10px 15px;
   color: white;
-  letter-spacing: 1px;
   font-weight: 800;
+  letter-spacing: 2px;
+  transition: 1s all ease;
+  border: 2px solid white;
+  background-color: #101010;
+  box-sizing: border-box;
 }
-.book-trending:hover{
-  background-color: #f5ed00;
+/* Book Show Hover */
+.trend_book-btn:hover{
+  background-color: yellow;
+  color: black;
+  border: 2px solid black;
 }
-.book-trending:hover a{
-  color: rgb(8, 9, 8);
+/* Watch Trailer */
+.trend_trailer-btn{
+  margin-bottom: 0.5em;
+  padding: 10px;
+  background-color: #10101097;
+  color: white;
+  border: 2px solid black;
+  letter-spacing: 2px;
+  font-weight: 800;
+  transition: 1s all ease;
 }
-#watch-t{
-  background-color: #af2727;
-}
-.watch-t2{
-  margin-right: 2em !important;
-}
-.watch-t3{
-  margin-right: 2.8em;
-}
-.watch-t4{
-  margin-right: 4.3em;
-}
-.watch-t5{
-  margin-right: 6em;
- 
-}
-/* watch trailer button of tredning movies */
-#watch-t:hover{
-  background-color: orangered;
+/* Watch trailer hover */
+.trend_trailer-btn:hover{
+  background-color: #ff6a00;
+  color: white;
+  border: 2px solid white;
 }
 
 
 
-/* Footer */
 
 
+
+
+
+
+
+
+
+
+
+/* Footer starts */
 
 .footer {
   background: linear-gradient(to bottom, #101010, #181818);
   color: #fff;
   padding: 40px 20px;
-  height: 50vh;
+  height: 60vh;
 }
 
 .footer-container {

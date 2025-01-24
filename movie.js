@@ -13,20 +13,17 @@ var swiper = new Swiper(".home", {
 });
 
 //
-/* Anime Movies swiper */
-var swiper1 = new Swiper('.mySwiper1', {
+/* Trending shows */
+var trendingShows = new Swiper(".trendingSwiper", {
   slidesPerView: 2,
-  spaceBetween: 5,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+  spaceBetween: 30,
   pagination: {
-    el: '#pagination2',
+    el: ".swiper-pagination",
     clickable: true,
   },
-  loop: true, // Enable infinite loop
 });
+
+
 /* Tredning Sect Swiper */
 var progressCircle = document.querySelector(".autoplay-progress svg");
 var progressContent = document.querySelector(".autoplay-progress span");
@@ -55,19 +52,23 @@ var swiper3 = new Swiper(".mySwiper3", {
 
 
 /* Typed Js Demo */
-var typed1 = new Typed('#element', {
-  strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+var typed1 = new Typed('class / id name', {
+  strings: ['<i>This Week</i>','<i>Get Ready for Fun</i>'],
   typeSpeed: 50,
+  backSpeed: 50,
+  startDelay:1000,
+  fadeOutClass: 'typed-fade-out',
+  loop:true,
 });
 
-/* Toogle waves */
+/* waves */
 let playbutton = document.querySelector('.btn-play');
 
-playbutton.addEventListener('mouseenter', () => {
+playbutton.addEventListener('onmouseenter', () => {
   playbutton.classList.add('nowaves'); 
 });
 
-playbutton.addEventListener('mouseleave', () => {
+playbutton.addEventListener('onmouseleave', () => {
   playbutton.classList.remove('nowaves'); 
 });
 
