@@ -22,7 +22,38 @@ var trendingShows = new Swiper(".trendingSwiper", {
     clickable: true,
   },
 });
-
+//
+var swiper = new Swiper(".ongoingSwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
+});
+// Nested Swiper
+const progressCircle1 = document.querySelector(".autoplay-progress svg");
+const progressContent1 = document.querySelector(".autoplay-progress span");
+var swiper = new Swiper(".nestedSwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  on: {
+    autoplayTimeLeft(s, time, progress) {
+      progressCircle1.style.setProperty("--progress", 1 - progress);
+      progressContent1.textContent = `${Math.ceil(time / 1000)}s`;
+    }
+  }
+});
 
 /* Tredning Sect Swiper */
 var progressCircle = document.querySelector(".autoplay-progress svg");
