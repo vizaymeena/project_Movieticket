@@ -792,9 +792,86 @@ color: white;
   color: white;
   border-bottom: 5px solid red;
 }
+.about_body{
+  width: 80%;
+  margin: 5em auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.about_title{
+  color: white;
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.about_body p {
+  color: white;
+  line-height: 1.5;
+  font-size: 20px;
 
+}
+/* About Img style starts */ 
+.about_img{
+  display: flex;
+  gap: 30px;
+}
+.about_img1,
+.about_img2{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: relative;
+  z-index: 1;
+  transition: 1s all ease;  
+}
 
-
+.about_img1{
+  background-position: center;
+  background-size: cover;
+  animation: change_bg_img 10s infinite  ease-in-out;
+}
+/* about img animation */
+@keyframes change_bg_img {
+  0%{
+    background-image: url(https://images.stockcake.com/public/f/8/b/f8b2f0e7-2172-4ee3-ac2f-850b5a38f067_large/joyful-audience-laughing-stockcake.jpg);
+  }
+  30%{
+    background-image: url(https://t3.ftcdn.net/jpg/07/11/76/22/360_F_711762221_uBdxF9kyIqr85UuzyqMgRzwWKgEorA7O.jpg);
+  }
+  60%{
+    background-image: url(https://t3.ftcdn.net/jpg/06/90/53/78/360_F_690537836_GwRdMKD6v0EBIi4H5NgWel8AclSGVa0T.jpg);
+  }
+  100%{
+    background-image: url(https://t4.ftcdn.net/jpg/06/68/51/79/360_F_668517972_YCAAfv2pADN3HNHcE0VVsiHTdMLln94g.jpg);
+  }
+}
+.about_img2{
+  background-image: url() ;
+  background-position: center;
+  background-size: cover;
+  animation: change_bg_img2 10s infinite ease-in-out;
+}
+/* about img animation */
+@keyframes change_bg_img2 {
+  0%{
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230616/pngtree-cinematic-delight-3d-popcorn-and-glasses-rendered-in-stunning-detail-image_3612445.jpg);
+  }
+  30%{
+    background-image: url(https://st4.depositphotos.com/8752776/28674/i/450/depositphotos_286749698-stock-photo-scattered-popcorn-from-paper-striped.jpg);
+  }
+  60%{
+    background-image: url(https://thumbs.dreamstime.com/b/popcorn-explosion-bowl-colorful-popcorn-mid-air-bowl-popcorn-bursts-kernels-flying-every-direction-334378086.jpg);
+  }
+  100%{
+    background-image: url(https://cdn.create.vista.com/api/media/small/362726474/stock-photo-top-view-bucket-tasty-popcorn-red-background);
+  }
+}
+/* About Img Style ends here */
 
 
 
@@ -803,7 +880,6 @@ color: white;
 
 
 /* Footer starts */
-
 .footer {
   background: linear-gradient(to bottom, #101010, #181818);
   color: #fff;
