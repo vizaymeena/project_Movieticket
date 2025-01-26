@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Selector</title>
+    <link rel="stylesheet" href="crud_movie.css">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Festive&family=Playwrite+VN:wght@100..400&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <div class="container">
+      <h1>Choose a Movie</h1>
+      <select id="movieSelect">
+          <option value="default">Select</option>
+          <option value="black-widow">Black Widow</option>
+          <option value="avatar">Avatar</option>
+          <option value="joker">Joker</option>
+          <option value="planet-of-apes">Planet of the Apes</option>
+          <option value="wakanda-forever">Wakanda Forever</option>
+      </select>
+    </div>
+    </header>
+
+    <main>
+
+        <section class="booking_form">
+            <div class="poster_container">
+                <div class="posterdiv">
+                    <img id="moviePoster" src="https://kodionconsulting.com/portals/0/images/resource/ticket-booking-500x500.jpg" alt="Movie Poster" style="width: 280px; height: 280px; border-radius: 50%;">
+                    <i class="fa-solid fa-arrow-right arrowright"></i>
+                </div>
+                <div class="poster_summary">
+                    <h3>Movie Name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, exercitationem sit. Magnam, quaerat. Vitae, sequi id exercitationem vero libero sit sint necessitatibus ipsa repudiandae fuga dolorum molestias temporibus blanditiis. Tempora?</p>
+                    <p class="movieduration">
+                        <span class="span1">120 MIN</span>
+                        <span class="span2">|</span> 
+                        <span class="span3">Action</span> 
+                    </p>
+                    <div class="price_trailer">
+                        <span>Price</span>
+                        <button>Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="date_day" class="date_day" >
+            <div class="dateDay_container">
+                <div></div>
+            </div>
+
+            <div class="daycontainer">
+                <div></div>
+            </div>
+        </section>
+
+
+        <section class="seat-container">
+            <div class="display"></div>
+            <div class="screen">
+                <div>Screen</div>
+            </div>
+        </section>
+
+    </main>
+  
+
+    <script src="crud_movie.js"></script>
+</body>
+</html>

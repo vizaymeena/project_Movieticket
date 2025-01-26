@@ -1,0 +1,115 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.poster_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.posterdiv{
+    height: 300px;
+    width: 300px;
+    border: 2px solid blue;
+    position: relative;
+}
+.arrowright{
+    position: absolute;
+    top: 120px;
+    right: -10;
+    z-index: 1;
+    padding: 5px;
+    border: 2px solid red;
+    border-radius: 50%;
+    background-color: black;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.7;
+    /* transition: 1s all ease; */
+}
+.arrowright:hover{
+    opacity: 1;
+    /* transform: translateX(10px); */
+}
+
+.booking_form{                                         /* section class */
+    height: 50vh;
+    width: 90%;
+    margin: auto;
+    border: 2px solid green;
+}
+
+.poster_summary{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.poster_summary h3{                                    /* Movie Name */
+    width: 50%;
+    margin: auto;
+    border-bottom: 2px solid red;
+    font-family: "Festive", serif;
+}
+.poster_summary p {                                   /* Movie paragraph */ 
+    font-family: "Merienda", serif;
+    font-size: 20px
+}
+.movieduration span{                                  /* movie durations */
+    font-family: "Merienda", serif;
+}
+.price_trailer span{                                  /* movie price */
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    padding: 5px 10px;
+    font-family: "Merienda", serif;
+
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 25px;
+    border: none;
+}
+.price_trailer button{                                /* movie book button */
+    padding: 5px 10px;
+    font-family: "Merienda", serif;
+    background-color: black;
+    color: white;
+    letter-spacing: 2px;
+    border: none;
+    font-size: 25px;
+}
+
+/* Seats Booking section */
+/* Section 2 */
+#date_day{
+    display: none;
+}
+/* section 3 */
+.seat-container{
+    height: 80vh;
+    width: 90%;
+    margin: auto;
+}
+.display{
+    margin: 50px auto auto auto; /* Top: 10px, Left and right: 20px, Bottom: 30px */
+    width: 50%;
+    height: 2em;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+
+    border-radius: 20px 20px 0px 0px;
+}
+.screen{
+    text-align: center;
+}
+.screen div{
+    width: 50%;
+    margin: 20px auto auto auto;
+    
+}
