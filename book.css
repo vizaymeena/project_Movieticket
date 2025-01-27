@@ -343,3 +343,92 @@
     transform: translateX(10px);
 }
 
+
+
+/* MEDIA QUERY */
+
+@media (min-width:360px) and (max-width:500px){
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ header{
+    width: 100%;
+ }
+.container{
+    background: linear-gradient(to right,rgb(55, 55, 137),black);
+    height: 6em;
+    width: 100%;
+    justify-content: space-between;
+}
+.container h1{
+    color: white;
+    font-style: normal;
+}
+/* Header ends */
+
+/* Booking form Section Starts */
+
+.booking_form{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: none;
+}
+.posterdiv,
+.moviePoster{
+   display: none;
+}
+.poster_summary{
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(to right,rgb(53, 53, 94),black);
+}
+.poster_summary h3{
+    font-size: 25px;
+    width: 100%;
+    color: orange;
+    text-align: center;
+    margin: 0;
+}
+.poster_summary p{
+    color: rgb(181, 176, 165);
+}
+/* Seats Reservation */
+.seat-container{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+.seats{
+    border: none;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.screen{
+    margin: 0;
+    width: 100%;
+}
+.seat{
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.book-status{
+    flex-direction: column;
+    gap: 10px;
+    height: fit-content;
+    width: 100%;
+}
+.checkout{
+    color:black;
+    border: 2px solid black;
+}
+
+}
