@@ -1,9 +1,25 @@
 
 .container{
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: linear-gradient(to right,rgb(116, 37, 48),rgb(19, 5, 5))
+}
+.container h1{
+    font-family: "Nothing You Could Do", serif;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-style: italic;
+}
+#movieSelect{
+    padding: 10px;
+    margin-bottom: 0.4em;
+    border-radius: 15px;
+    color: blue;
 }
 .poster_container{
     display: flex;
@@ -91,62 +107,75 @@
 }
 /* section 3 */
 .seat-container{
-    background: linear-gradient(to right,red,black);
+    background: linear-gradient(to right,rgb(47, 47, 91),rgb(0, 0, 0));
     height: 100vh;
     width: 90%;
     margin: auto;
 }
-.display{
-    margin: 50px auto auto auto; /* Top: 10px, Left and right: 20px, Bottom: 30px */
-    width: 50%;
-    height: 2em;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
 
-    border-radius: 20px 20px 0px 0px;
-}
 .screen{
     text-align: center;
+    width: 80%;
+    margin: 2em auto 3em;
+    border-top: 5px solid white;
+    border-radius: 30px 30px 0px 0px ;
+    position: relative;
+    z-index: 1;
+}
+.screen::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border: 0px solid transparent;
+    width: 100%;
+    box-shadow: 0px 10px 20px 4px white;
 }
 .screen div{
     width: 50%;
     margin: 20px auto auto auto;
+    color: white;
     
 }
 .seats{
-    height: 28em;
+    height: 35em;
     width: 80%;
-    margin: auto;
+    margin: 2em auto auto auto;
     border: 2px solid red;
     display: flex;
     flex-direction: column;
 }
 .row-container{
-    height: 15%;
+    height: fit-content;
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     justify-content: space-around;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     
 }
 .seat_code-left,
 .seat_code-right{
-    margin-top: 3em;
+    height: 20px;
+    width: fit-content;
+    margin-top: 1em;
     color: white;
     
 }
 .row1-left,.row1-right{
+    height: 20px;
 
     width: 30%;
-    margin-top: 3em;
+    margin-top: 1em;
     display: flex;
     justify-content: space-between;
     height: 20px;
     /* border: 2px solid green; */
 }
 .row1-middle{
-    margin-top: 3em;
+    margin-top: 1em;
     width: 20%;
     height: 25px;
     border-left: 2px solid black;
@@ -185,6 +214,12 @@
     border-radius: 5px;
     position: relative;
     z-index: 1;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+.seat:hover{
+    transform: scale(1.2);
+    border: 2px solid white;
 }
 .seat::after{
     content: '';
@@ -195,7 +230,10 @@
     border-bottom: 3.5px solid rgb(230, 75, 14);
     height: 100%;
     width: 100%;
-
+    transition: 1s all ease;
+}
+.seat:hover::after{
+    border-bottom: 3.5px solid white;
 }
 
 
@@ -228,6 +266,7 @@
     height: 20px;
     color: white;
 }
+/* delux seats */
 .delux-row{
     display: flex;
     justify-content: space-between;
@@ -235,5 +274,72 @@
     height: 30px;
     width: 80%;
     
+}
+/* seats status */
+.book-status{
+    margin-top: 1em;
+    display: flex;
+    gap: 50px;
+    color: white;
+    font-size: 20px;
+    font-family: "Caveat", serif;
+    justify-content: center;
+    align-items: center;
+}
+/* ticket status starts */
+.selected-slot{
+    display: flex;
+    color: rgb(13, 143, 13);
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-bottom: 4px solid green;
+}
+.booked-slot{
+    color: red;
+    border-bottom: 5px solid red;
+}
+.empty-slot{
+    color: gray;
+    border-bottom: 5px solid gray;
+}
+/* ticket status ends */
+
+.numofseats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 40px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+/* empty slots status */
+.slot-empty{
+    background-color: gray;
+
+}
+/* book slot status */ 
+.slot-book{
+    background-color: red;
+}
+
+/* selected seat classlist */
+.select-slot{
+    background-color: green;
+    border: 2px solid white;
+}
+
+.checkout{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    transition: 1s ease-in-out;
+}
+.checkout:hover{
+    transform: translateX(10px);
 }
 

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Selector</title>
+    <link rel="stylesheet" href="book.css">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Festive&family=Playwrite+VN:wght@100..400&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <div class="container">
+      <h1>Choose a Movie</h1>
+      <select id="movieSelect">
+          <option value="default">Select</option>
+          <option value="black-widow">Black Widow</option>
+          <option value="avatar">Avatar</option>
+          <option value="joker">Joker</option>
+          <option value="planet-of-apes">Planet of the Apes</option>
+          <option value="wakanda-forever">Wakanda Forever</option>
+      </select>
+    </div>
+    </header>
+
+    <main>
+
+        <section class="booking_form">
+            <div class="poster_container">
+                <div class="posterdiv">
+                    <img id="moviePoster" src="https://kodionconsulting.com/portals/0/images/resource/ticket-booking-500x500.jpg" alt="Movie Poster" style="width: 280px; height: 280px; border-radius: 50%;">
+                    <i class="fa-solid fa-arrow-right arrowright"></i>
+                </div>
+                <div class="poster_summary">
+                    <h3>Movie Name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, exercitationem sit. Magnam, quaerat. Vitae, sequi id exercitationem vero libero sit sint necessitatibus ipsa repudiandae fuga dolorum molestias temporibus blanditiis. Tempora?</p>
+                    <p class="movieduration">
+                        <span class="span1">120 MIN</span>
+                        <span class="span2">|</span> 
+                        <span class="span3">Action</span> 
+                    </p>
+                    <div class="price_trailer">
+                        <span>Price</span>
+                        <button>Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="date_day" class="date_day" >
+            <div class="dateDay_container">
+                <div></div>
+            </div>
+
+            <div class="daycontainer">
+                <div></div>
+            </div>
+        </section>
+
+
+        <section class="seat-container">
+            <!-- <div class="display"></div> -->
+            
+            <div class="seats">
+                <div class="screen">
+                    <div>Screen</div>
+                </div>
+                <!-- Row 1 -->
+                <div class="row-container">
+                  <div class="seat_code-left">A</div>
+                  <div class="row1-left">
+                      <div class="seat slot-book" data-seat-number="A1"></div>
+                      <div class="seat slot-book" data-seat-number="A2"></div>
+                      <div class="seat slot-empty" data-seat-number="A3"></div>
+                      <div class="seat slot-book" data-seat-number="A4"></div>
+                      <div class="seat slot-empty" data-seat-number="A5"></div>
+                      <div class="seat slot-empty" data-seat-number="A6"></div>
+                      <div class="seat slot-book" data-seat-number="A7"></div>
+                  </div>
+                  <div class="row1-middle">
+                    <div class="ladder"></div>
+                  </div>
+                  <div class="row1-right">
+                      <div class="seat slot-book" data-seat-number="A8"></div>
+                      <div class="seat slot-book" data-seat-number="A9"></div>
+                      <div class="seat slot-book" data-seat-number="A10"></div>
+                      <div class="seat slot-empty" data-seat-number="A11"></div>
+                      <div class="seat slot-empty" data-seat-number="A12"></div>
+                      <div class="seat slot-empty" data-seat-number="A13"></div>
+                      <div class="seat slot-empty" data-seat-number="A14"></div>
+                  </div>
+                  <div class="seat_code-right">A1</div>
+                </div>
+
+                <!-- Row 2 -->
+
+                <div class="row2">
+                    <div class="scleft">B</div>
+                    <div class="rleft">
+                        <div class="seat slot-empty" data-seat-number="B1"></div>
+                        <div class="seat slot-empty" data-seat-number="B2"></div>
+                        <div class="seat slot-empty" data-seat-number="B3"></div>
+                        <div class="seat slot-empty" data-seat-number="B4"></div>
+                        <div class="seat slot-empty" data-seat-number="B5"></div>
+                        <div class="seat slot-empty" data-seat-number="B6"></div>
+                        <div class="seat slot-empty" data-seat-number="B7"></div>
+                    </div>
+                    <div class="rmiddle">
+                      <div class="stair"></div>
+                    </div>
+                    <div class="rright">
+                        <div class="seat slot-empty" data-seat-number="B8"></div>
+                        <div class="seat slot-empty" data-seat-number="B9"></div>
+                        <div class="seat slot-empty" data-seat-number="B10"></div>
+                        <div class="seat slot-book" data-seat-number="B11"></div>
+                        <div class="seat slot-book" data-seat-number="B12"></div>
+                        <div class="seat slot-book" data-seat-number="B13"></div>
+                        <div class="seat slot-book" data-seat-number="B14"></div>
+                    </div>
+                    <div class="scright">B2</div>
+                  </div>
+
+                   <!-- Row 3 -->
+
+                <div class="row2">
+                    <div class="scleft">C</div>
+                    <div class="rleft">
+                        <div class="seat slot-empty" data-seat-number="C1"></div>
+                        <div class="seat slot-empty" data-seat-number="C2"></div>
+                        <div class="seat slot-book" data-seat-number="C3"></div>
+                        <div class="seat slot-book" data-seat-number="C4"></div>
+                        <div class="seat slot-empty" data-seat-number="C5"></div>
+                        <div class="seat slot-book" data-seat-number="C6"></div>
+                        <div class="seat slot-empty" data-seat-number="C7"></div>
+                    </div>
+                    <div class="rmiddle">
+                      <div class="stair"></div>
+                    </div>
+                    <div class="rright">
+                        <div class="seat slot-empty" data-seat-number="C8"></div>
+                        <div class="seat slot-empty" data-seat-number="C9"></div>
+                        <div class="seat slot-empty" data-seat-number="C10"></div>
+                        <div class="seat slot-book" data-seat-number="C11"></div>
+                        <div class="seat slot-book" data-seat-number="C12"></div>
+                        <div class="seat slot-book" data-seat-number="C13"></div>
+                        <div class="seat slot-empty" data-seat-number="C14"></div>
+                    </div>
+                    <div class="scright">C3</div>
+                  </div>
+                   <!-- Row 4 -->
+
+                <div class="row5">
+                    <div class="scleft">D</div>
+                    <div class="rleft">
+                        <div class="seat slot-empty" data-seat-number="D1"></div>
+                        <div class="seat slot-empty" data-seat-number="D2"></div>
+                        <div class="seat slot-empty" data-seat-number="D3"></div>
+                        <div class="seat slot-empty" data-seat-number="D4"></div>
+                        <div class="seat slot-empty" data-seat-number="D5"></div>
+                        <div class="seat slot-empty" data-seat-number="D6"></div>
+                        <div class="seat slot-empty" data-seat-number="D7"></div>
+                    </div>
+                    <div class="rmiddle">
+                      <div class="stair"></div>
+                    </div>
+                    <div class="rright">
+                        <div class="seat slot-book" data-seat-number="D8"></div>
+                        <div class="seat slot-book" data-seat-number="D9"></div>
+                        <div class="seat slot-book" data-seat-number="D10"></div>
+                        <div class="seat slot-book" data-seat-number="D11"></div>
+                        <div class="seat slot-empty" data-seat-number="D12"></div>
+                        <div class="seat slot-empty" data-seat-number="D13"></div>
+                        <div class="seat slot-empty" data-seat-number="D14"></div>
+                    </div>
+                    <div class="scright">D4</div>
+                  </div>
+                   <!-- Row 5 -->
+
+                <div class="row2">
+                    <div class="scleft">E</div>
+                    <div class="rleft">
+                        <div class="seat slot-empty" data-seat-number="E1"></div>
+                        <div class="seat slot-empty" data-seat-number="E2"></div>
+                        <div class="seat slot-empty" data-seat-number="E3"></div>
+                        <div class="seat slot-empty" data-seat-number="E4"></div>
+                        <div class="seat slot-empty" data-seat-number="E5"></div>
+                        <div class="seat slot-empty" data-seat-number="E6"></div>
+                        <div class="seat slot-empty" data-seat-number="E7"></div>
+                    </div>
+                    <div class="rmiddle">
+                      <div class="stair"></div>
+                    </div>
+                    <div class="rright">
+                        <div class="seat slot-empty" data-seat-number="E8"></div>
+                        <div class="seat slot-empty" data-seat-number="E9"></div>
+                        <div class="seat slot-empty" data-seat-number="E10"></div>
+                        <div class="seat slot-empty" data-seat-number="E11"></div>
+                        <div class="seat slot-empty" data-seat-number="E12"></div>
+                        <div class="seat slot-empty" data-seat-number="E13"></div>
+                        <div class="seat slot-empty" data-seat-number="E14"></div>
+                    </div>
+                    <div class="scright">E5</div>
+                  </div>
+                   <!-- Row 6 -->
+
+                <div class="row2">
+                    <div class="scleft">F</div>
+                    <div class="rleft">
+                        <div class="seat slot-empty" data-seat-number="F1"></div>
+                        <div class="seat slot-empty" data-seat-number="F2"></div>
+                        <div class="seat slot-empty" data-seat-number="F3"></div>
+                        <div class="seat slot-empty" data-seat-number="F4"></div>
+                        <div class="seat slot-book" data-seat-number="F5"></div>
+                        <div class="seat slot-book" data-seat-number="F6"></div>
+                        <div class="seat slot-book" data-seat-number="F7"></div>
+                    </div>
+                    <div class="rmiddle">
+                      <div class="stair"></div>
+                    </div>
+                    <div class="rright">
+                        <div class="seat slot-book" data-seat-number="F8"></div>
+                        <div class="seat slot-book" data-seat-number="F9"></div>
+                        <div class="seat slot-book" data-seat-number="F10"></div>
+                        <div class="seat slot-book" data-seat-number="F11"></div>
+                        <div class="seat slot-book" data-seat-number="F12"></div>
+                        <div class="seat slot-book" data-seat-number="F13"></div>
+                        <div class="seat slot-book" data-seat-number="F14"></div>
+                    </div>
+                    <div class="scright">F6</div>
+                  </div>
+                   <!-- Row 7 -->
+
+                <div class="row2">
+                    <div class="scleft">G</div>
+                    <div class="rleft">
+                        <div class="seat slot-empty" data-seat-number="G1"></div>
+                        <div class="seat slot-empty" data-seat-number="G2"></div>
+                        <div class="seat slot-empty" data-seat-number="G3"></div>
+                        <div class="seat slot-empty" data-seat-number="G4"></div>
+                        <div class="seat slot-empty" data-seat-number="G5"></div>
+                        <div class="seat slot-empty" data-seat-number="G6"></div>
+                        <div class="seat slot-empty" data-seat-number="G7"></div>
+                    </div>
+                    <div class="rmiddle">
+                      <div class="stair"></div>
+                    </div>
+                    <div class="rright">
+                        <div class="seat slot-empty" data-seat-number="G8"></div>
+                        <div class="seat slot-empty" data-seat-number="G9"></div>
+                        <div class="seat slot-empty" data-seat-number="G10"></div>
+                        <div class="seat slot-empty" data-seat-number="G11"></div>
+                        <div class="seat slot-empty" data-seat-number="G12"></div>
+                        <div class="seat slot-empty" data-seat-number="G13"></div>
+                        <div class="seat slot-empty" data-seat-number="G14"></div>
+                    </div>
+                    <div class="scright">G7</div>
+                  </div>
+                 <!-- Row 8 Delux Row -->
+                <div class="row-delux">
+
+                  <div class="delux1">
+                      <div class="delux-code">A+</div>
+                      <div class="delux-row">
+                        <div class="seat slot-empty" data-seat-number="DLX1"></div>
+                        <div class="seat slot-empty" data-seat-number="DLX2"></div>
+                        <div class="seat slot-book" data-seat-number="DLX3"></div>
+                        <div class="seat slot-empty" data-seat-number="DLX4"></div>
+                        <div class="seat slot-book" data-seat-number="DLX5"></div>
+                        <div class="seat slot-book" data-seat-number="DLX6"></div>
+                        <div class="seat slot-book" data-seat-number="DLX7"></div>
+                        <div class="seat slot-book" data-seat-number="DLX8"></div>
+                        <div class="seat slot-book" data-seat-number="DLX9"></div>
+                        <div class="seat slot-book" data-seat-number="DLX10"></div>
+                        <div class="seat slot-empty" data-seat-number="DLX11"></div>
+                        <div class="seat slot-book" data-seat-number="DLX12"></div>
+                        <div class="seat slot-empty" data-seat-number="DLX13"></div>
+                        <div class="seat slot-empty" data-seat-number="DLX14"></div>
+                        <div class="seat slot-empty" data-seat-number="DLX15"></div>
+                      </div>
+                      <div class="delux-code">A-</div>
+                  </div>
+
+                  <div class="delux1">
+                    <div class="delux-code">A+</div>
+                    <div class="delux-row">
+                        <div class="seat slot-book" data-seat-number="DLXX1"></div>
+                        <div class="seat slot-empty" data-seat-number="DLXX2"></div>
+                        <div class="seat slot-empty" data-seat-number="DLXX3"></div>
+                        <div class="seat slot-empty" data-seat-number="DLXX4"></div>
+                        <div class="seat slot-empty" data-seat-number="DLXX5"></div>
+                        <div class="seat slot-empty" data-seat-number="DLXX6"></div>
+                        <div class="seat slot-book" data-seat-number="DLXX7"></div>
+                        <div class="seat slot-empty" data-seat-number="DLXX8"></div>
+                        <div class="seat slot-empty" data-seat-number="DLXX9"></div>
+                        <div class="seat slot-book" data-seat-number="DLXX10"></div>
+                        <div class="seat slot-book" data-seat-number="DLXX11"></div>
+                        <div class="seat slot-empty" data-seat-number="DLXX12"></div>
+                        <div class="seat slot-empty" data-seat-number="DLXX13"></div>
+                        <div class="seat slot-empty" data-seat-number="DLXX14"></div>
+                        <div class="seat slot-book" data-seat-number="DLXX15"></div>
+                    </div>
+                    <div class="delux-code">A-</div>
+                </div>
+
+                   
+                  </div>
+            
+                </div>
+                  
+            </div>
+            <div class="book-status">
+                <div class="selected-slot">
+                    <div class="numofseats"></div>
+                    <div>Selected</div>
+                    
+                </div>
+                <div class="booked-slot"> Booked </div>
+                <div class="empty-slot"> Available </div>
+                <div class="checkoutdiv"><i class="fa-solid fa-arrow-right checkout"></i></div>
+            </div>
+        </section>
+
+    </main>
+  
+
+    <script src="book.js"></script>
+</body>
+</html>

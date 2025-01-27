@@ -981,3 +981,306 @@ color: white;
   padding-top: 10px;
   color: #888;
 }
+
+
+
+
+
+/* media Query */
+
+@media (min-width: 360px) and (max-width: 500px) {
+  #header {
+    padding: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .m-heading {
+    display: flex;
+    gap:20%;
+    width: 100%;
+  }
+
+  .m-heading h1 {
+    font-size: 18px;
+  }
+
+  .hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+  }
+
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .navlinks a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .owl {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .inputsearch {
+    width: 90%;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  #search,
+  #signup {
+    display: none;
+    font-size: 20px;
+    margin: 5px;
+  }
+}
+
+/* section 1 */
+@media (min-width: 360px) and (max-width: 500px) {
+
+  #home{
+    width: 100%;
+    height: 80vh;
+  }
+  .container{
+    height: 80vh;
+    width: 100%;
+  }
+  .container img{
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+  }
+  .home-text{
+    width: 100%;
+    height: 80vh;
+    margin-left: 0;
+  }
+  .home-text div span{
+    display: none;
+  }
+  .home-text h1{
+    margin-top: 0.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    text-shadow: none;
+    font-family: "Tangerine";
+    letter-spacing: 2px;
+    width: 100%;
+    
+  }
+  .blackwidow-brief{
+    background-color: transparent !important;
+    color: white !important;
+  }
+  .home-text p{
+    font-family: "Festive", serif;
+    font-size: 15px;
+    width: 100%;
+    color: white;
+    background-color: none;
+    margin: 0;
+    padding: 0;
+
+  }
+  .btn-book{
+
+    margin-top: 2em;
+    padding: 5px 5px;
+    font-size: 25px;
+    font-style: normal;
+    border-radius: 5px;
+    border: none;
+    text-shadow: none;
+    font-weight: 600;
+    font-family: "Merienda", serif;
+  }
+  .btn-play{
+    
+    bottom: 5em;
+    left: 0.1em;
+    height: 50px;
+    width: 50px;
+  }
+  .btn-play::after,
+  .btn-play::before{
+    animation: btn-play-media 2s infinite ease-in-out ;
+  }
+  .btn-play i{
+    font-size: 30px;
+  }
+  @keyframes btn-play-media {
+    0% {
+      transform: scale(0.5);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+  /* Home section slider ends */
+
+  /* Upcoming Grid Starts */
+  .ptag-noti{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  } 
+  .heading{
+    font-family: "Merienda", serif;
+    width: fit-content;
+    color: black;
+  }
+  .box h2{
+    color: black;
+  }
+  /* Upcoming Grid Ends Here */
+
+
+
+  /* Trending Sections Starts Here */
+
+   .swiper
+   {
+    margin: 0;
+    width: 100%;
+   }
+   .trendingSwiper
+   {
+    width: 100%;
+    margin: 0;
+   }
+   .swiperWraper{
+    width: 100%;
+    overflow: hidden;
+   }
+  .trending_slides
+  {
+   width: 100%;
+   height: fit-content;
+  }
+  
+  .Movie{
+    width: 100%;
+    margin-top: 8.5em;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(99, 32, 32, 0.489);
+  }
+  .moviename{
+    color: black;
+    text-shadow: 0px 2px white;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 25px;
+    width:100%;
+    letter-spacing: 0;
+  }
+  .ratings i{
+    font-size: 18px;
+    color: red;
+    text-shadow: 0px 2px black;
+  }
+  .Movie .d-duration{
+    
+    font-size: 15px;
+    width: fit-content;
+  }
+  .d-duration .duration,
+  .d-duration .genere{
+    color: white ;
+  }
+  .trending_btn{
+    justify-content: space-between;
+  }
+  .hovericon_plus{
+    display: none;
+  }
+  .trending-pagination{
+    margin-top: 1em;
+  }
+/* Trending Section Ends Here */
+
+/* About Section */
+#about_section{
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/026/992/049/non_2x/red-theatre-curtains-free-photo.jpg);
+}
+.about_heading{
+  color: whitesmoke;
+}
+.about_body{
+  margin: 0;
+}
+.about_title{
+  color: rgb(194, 197, 48);
+  justify-content: center;
+  align-items: flex-start;
+}
+.about_body{
+  display: block;
+}
+.about_body p{
+  font-size: 13px;
+  font-weight: 400;
+  width: 100%;
+  letter-spacing: 0;
+}
+.about_title{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+
+}
+.about_img{
+  width: 100vw;
+  margin: auto;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.about_img1,
+.about_img2{
+  height: 200px;
+  width: 350px;
+}
+
+/* Footer */
+.footer{
+  height: 100vh;
+  margin: 0;
+  width: 100%;
+
+}
+.footer-links{
+  height: fit-content;
+}
+
+
+
+}
+  
