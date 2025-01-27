@@ -838,16 +838,16 @@ color: white;
 /* about img animation */
 @keyframes change_bg_img {
   0%{
-    background-image: url(https://images.stockcake.com/public/f/8/b/f8b2f0e7-2172-4ee3-ac2f-850b5a38f067_large/joyful-audience-laughing-stockcake.jpg);
+    background-image: url(https://img.freepik.com/premium-photo/surprised-man-with-popcorn-watching-film-cinema-movie-entertainment_266732-2745.jpg);
   }
   30%{
-    background-image: url(https://t3.ftcdn.net/jpg/07/11/76/22/360_F_711762221_uBdxF9kyIqr85UuzyqMgRzwWKgEorA7O.jpg);
+    background-image: url(https://images.stockcake.com/public/a/3/8/a386e32c-fbb5-4465-bc46-f60b646c32af_large/movie-night-out-stockcake.jpg);
   }
   60%{
     background-image: url(https://t3.ftcdn.net/jpg/06/90/53/78/360_F_690537836_GwRdMKD6v0EBIi4H5NgWel8AclSGVa0T.jpg);
   }
   100%{
-    background-image: url(https://t4.ftcdn.net/jpg/06/68/51/79/360_F_668517972_YCAAfv2pADN3HNHcE0VVsiHTdMLln94g.jpg);
+    background-image: url(https://img.freepik.com/premium-photo/surprised-people-3d-glasses-with-popcorn-drinks-watching-movie-cinema-entertainment-business_266732-10792.jpg);
   }
 }
 .about_img2{
