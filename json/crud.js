@@ -137,13 +137,7 @@ let update=async(id)=>{
 
 let finalupdate=(id)=>{
 
-
-
-
-    
     let url=`http://localhost:3000/Movie/${id}`
-
-
 
     fetch(url,{method:"PUT",
 
@@ -161,8 +155,6 @@ let finalupdate=(id)=>{
 
             }
         )
-    
-    
 }
     )
 }
@@ -173,25 +165,3 @@ let finalupdate=(id)=>{
 
 
 
-////////
-
-{/* <div id="finalform"> 
-<div class="receipt">Receipt</div>
-<div class="userdetails">
-    <div class="firstname1">${e.firstname}</div>
-    <div class="lastname1">${e.lastname}</div>
-</div>
-<div class="age1">${e.age}</div>
-<div class="person1">${e.person}</div>
-<div class="date1">${e.date}</div>
-<div class="day1">${e.day}</div>
-<div class="contact1">${e.contact}</div>
-<div class="meals1">${e.meals}</div>
-<div class="seat1">${e.seat}</div>
-<div class="price1">${e.price}</div>
-</div> 
-<div class="edit">
-<div> <input onclick="finalUpdate('${e.id}')" type="submit" value="Submit"> </div>
-<div> <button id="delete" onclick="cancel('${e.id}')" id="cancel">Cancel</button>
-
-</div> */}
