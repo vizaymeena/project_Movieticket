@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#form{
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    background: linear-gradient(to right, rgb(64, 10, 10),black
+    );
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+#label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    height: 100%;
+    font-size: 20px;
+    width: fit-content;
+}
+.label-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.label-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 15px;
+
+    width: fit-content;
+}
+.label-input div input{
+    padding: 5px;
+
+}

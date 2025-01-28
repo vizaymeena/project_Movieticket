@@ -1,27 +1,31 @@
 {
+  "Movie": [
+    {
 
-    "Movie":[
+      "name":"",
+      "age":"",
+      "email":"",
+      "person":"",
+      "price":""
 
-        {
-            "name":"Vijay",
-            "age":"23",
-            "batch": "P-43"
-        },
-        {
-            "name":"Himanshu",
-            "age":"23",
-            "batch":"P-43"
-        },
-        {
-            "name":"Yash",
-            "age":"23",
-            "batch": "P-43"
-        },
-        {
-            "name":"Ragini",
-            "age":"23",
-            "batch":"P-43"
-        }
-    ]
+    },
+    {
 
+      "name":"",
+      "age":"",
+      "email":"",
+      "person":"",
+      "price":""
+
+    },
+    {
+
+      "name":"",
+      "age":"",
+      "email":"",
+      "person":"",
+      "price":""
+
+    }
+  ]
 }

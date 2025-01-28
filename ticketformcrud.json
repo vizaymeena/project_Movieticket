@@ -1,0 +1,43 @@
+{
+  "movieTicket": [
+    {
+      "id": "d517",
+      "firstname": "ajay",
+      "lastname": "meena",
+      "person": "3",
+      "age": "24",
+      "date": "2025-01-29",
+      "day": "default",
+      "contact": "7987725298",
+      "meals": "colddrink",
+      "seat": {},
+      "price": null
+    },
+    {
+      "id": "6728",
+      "firstname": "Vijay",
+      "lastname": "Meena",
+      "person": "5",
+      "age": "15",
+      "date": "2024-12-31",
+      "day": "default",
+      "contact": "23343434",
+      "meals": "Popcorn",
+      "seat": {},
+      "price": 1500
+    },
+    {
+      "id": "88f8",
+      "firstname": "Vijay",
+      "lastname": "israni",
+      "person": "2",
+      "age": "15",
+      "date": "2025-01-30",
+      "day": "default",
+      "contact": "23343434",
+      "meals": "colddrink",
+      "seat": {},
+      "price": 600
+    }
+  ]
+}
