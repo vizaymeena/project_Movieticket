@@ -1010,10 +1010,12 @@ color: white;
   }
 
   .hamburger {
-    font-size: 24px;
+    /* font-size: 24px; */
     cursor: pointer;
     display: block;
+    
   }
+  
 
   .navlinks {
     display: none;

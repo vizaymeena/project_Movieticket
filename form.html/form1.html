@@ -1,63 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="form1.css">
-</head>
-<body>
-
-  <form id="form" action="">
-    <div id="label">
-      <div class="label-group">
-        <div>  <label for=""> NAME  :</label> </div>
-        <div>  <label for=""> AGE   :</label> </div>
-        <div>  <label for=""> CONTACT :</label> </div>
-        <div>  <label for=""> CITY :</label> </div>
-        <div>  <label for=""> DAY :</label> </div>
-        <div>  <label for=""> DATE :</label> </div>
-        <div>  <label for=""> MEALS :</label> </div>
-        <div>  <label for=""> PERSON :</label> </div>
+<form id="form" action="">
+  <div class="form-group">
+      <!-- name -->
+      <div class="name">
+          <div>
+             <label for="fullname1">First Name:</label>
+             <input value="${data.firstname}" type="text" id="fullname1">
+          </div>
+          <div>
+             <label for="lastname1">Last Name:</label>
+             <input value="${data.lastname}" type="text" id="lastname1">
+          </div>
       </div>
-
-      <div class="label-input">
-        <div>  <input type="text" id="name">    </div>
-        <div>  <input type="text" id="age">     </div>
-        <div>  <input type="text" id="contact"> </div>
-        <div>  <input type="text" id="city">    </div>
-        <div>  <input type="text" id="day">     </div>
-        <div>  <input type="text" id="date">    </div>
-        <div>   
-          <select name="meals" id="meal">
-            <option value="default">NONE</option>
-            <option value="default">COLD DRINK</option>
-            <option value="default">WATER</option>
-            <option value="default">SNACKS</option>
-            <option value="default">POPCORN</option>
-          </select> 
-        </div>
-        <div>  
-          <input type="text" id="persons">  
-          <select name="select" id="persons">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-         </select> 
-        </div>
-        <div>  
-         
-        </div>
+      <!-- age -->
+      <label for="age1">Age:</label>
+      <input value="${data.age}" type="number" id="age1">
+  <!-- Day Date Persons -->
+  <div class="ddp">
+      <div class="person">
+       <label for="person1">Persons:</label>
+       <select value="${data.person}" name="noofpersons" id="person1">
+          <option value="default">Select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+       </select>
       </div>
-    </div>
-  </form>
-  
-</body>
-</html>
+      <div class="date1">
+       <label for="date1">Date:</label>
+       <input value="${data.date}" type="date" id="date1">
+      </div>
+      <div class="day1">
+       <label for="day1">Day:</label>
+       <select value="${data.day}" name="day" id="day1">
+          <option value="default">Select</option>
+          <option value="default">Sunday</option>
+          <option value="default">Monday</option>
+          <option value="default">Tuesday</option>
+          <option value="default">Wednesday</option>
+          <option value="default">Thursday</option>
+          <option value="default">Friday</option>
+          <option value="default">Saturday</option>
+       </select>
+      </div>
+      </div>
+      <!-- Contact -->
+      <label for="contact">Contact:</label>
+      <input value="${data.contact}" type="number" id="contact1">
+      <!-- Meals -->
+      <label for="meals1">Meals:</label>
+      <select value="${data.meals}" name="meals" id="meals1">
+          <option value="default">None</option>
+          <option value="Popcorn">Popcorn</option>
+          <option value="colddrink">Cold Drink</option>
+          <option value="water">Water Bottle</option>
+      </select>
+      <!-- Seat -->
+      <div class="seat1">Seat: <span class="seatnum1">A1</span></div>
+      <!-- Price -->
+      <div class="price1">Price: <span><i class="fa-solid fa-indian-rupee-sign"></i> 300 / person</span></div>
+
+      <input id="submit1" type="submit" onclick="return finalupdate('${data.id}')">
+
+  </div>   
+</form> 

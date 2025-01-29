@@ -88,6 +88,15 @@ input:focus, select:focus {
 }
 
 
+#show{
+  height: 50vh;
+  width: 80%;
+  margin: auto;
+  border: 2px solid red;
+  background-color: white;
+
+}
+
 
 /* javascript GET html structure */
 

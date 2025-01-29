@@ -112,7 +112,7 @@ let cancel = (id) => {
 
 let update=async(id)=>{
 
-  let url=`http://localhost:3000/Movie/${id}`
+ let url=`http://localhost:3000/Movie/${id}`
  let res=  await fetch(url,{method:"GET"})
  let data=await res.json()
 
@@ -120,85 +120,37 @@ let update=async(id)=>{
  
  show.innerHTML=`
 
-     <form id="form" action="">
-    <div class="form-group">
-        <!-- name -->
-        <div class="name">
-            <div>
-               <label for="fullname">First Name:</label>
-               <input value="${e.firstname}" type="text" id="fullname">
-            </div>
-            <div>
-               <label for="lastname">Last Name:</label>
-               <input value="${e.lastname}" type="text" id="lastname">
-            </div>
-        </div>
-        <!-- age -->
-        <label for="age">Age:</label>
-        <input value="${e.age}" type="number" id="age">
-    <!-- Day Date Persons -->
-    <div class="ddp">
-        <div class="person">
-         <label for="person">Persons:</label>
-         <select value="${e.person}" name="noofpersons" id="person">
-            <option value="default">Select</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-         </select>
-        </div>
-        <div class="date">
-         <label for="date">Date:</label>
-         <input value="${e.date}" type="date" id="date">
-        </div>
-        <div class="day">
-         <label for="day">Day:</label>
-         <select value="${e.day}" name="day" id="day">
-            <option value="default">Select</option>
-            <option value="default">Sunday</option>
-            <option value="default">Monday</option>
-            <option value="default">Tuesday</option>
-            <option value="default">Wednesday</option>
-            <option value="default">Thursday</option>
-            <option value="default">Friday</option>
-            <option value="default">Saturday</option>
-         </select>
-        </div>
-        </div>
-        <!-- Contact -->
-        <label for="contact">Contact:</label>
-        <input value="${e.contact}" type="number" id="contact">
-        <!-- Meals -->
-        <label for="meals">Meals:</label>
-        <select value="${e.meals}" name="meals" id="meals">
-            <option value="default">None</option>
-            <option value="Popcorn">Popcorn</option>
-            <option value="colddrink">Cold Drink</option>
-            <option value="water">Water Bottle</option>
-        </select>
-        <!-- Seat -->
-        <div class="seat">Seat: <span class="seatnum">A1</span></div>
-        <!-- Price -->
-        <div class="price">Price: <span><i class="fa-solid fa-indian-rupee-sign"></i> 300 / person</span></div>
+ <div id="firstname1">'${data.firstname}'</div>
+ <div id="lastname1">'${data.lastname}'</div>
+ <div id="age1">'${data.age}'</div>
+ <div id="contact1">'${data.contact}'</div>
+ <div id="day1">'${data.day}'</div>
+ <div id="date1">'${data.date}'</div>
+ <div id="meals1">'${data.meals}'</div>
+ <div id="seat1">'${data.seat}'</div>
+ <div id="price1">'${data.price}'</div>
+ <div id="person1">'${data.person}'</div>
+ <input type="text" value="submit" onclick="update('${data.id}')">
 
-        <input id="submit" type="submit" onclick="return finalUpdate('${e.id}')">
-
-    </div>   
-</form> 
- 
  ` 
 }
 
 
-
 let finalupdate=(id)=>{
+
+  // inputvalues
+  
+  let firstname = document.querySelector("#fullname1").value
+  let lastname = document.querySelector("#lastname1").value
+  let age = document.querySelector("#age1").value
+  let person = document.querySelector("#person1").value
+  let date = document.querySelector("#date1").value
+  let day = document.querySelector("#day1").value
+  let contact = document.querySelector("#contact1").value
+  let meals = document.querySelector("#meals1").value
+  let seat = document.querySelector(".seat1")
+  let price = document.querySelector(".price1")
+
 
   let url=`http://localhost:3000/Movie/${id}`
 
@@ -210,15 +162,16 @@ let finalupdate=(id)=>{
       body:JSON.stringify(
 
           {
-              name:name,
+              firstname:firstname,
+              lastname:lastname,
               age:age,
               person:person,
               date:date,
-              day:day,
+              date:date,
               contact:contact,
               meals:meals,
               seat:seat,
-              price:person*300
+              price:300*person
           }
       )
 }
