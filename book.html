@@ -15,38 +15,108 @@
     <div class="container">
       <h1>Choose a Movie</h1>
       <select id="movieSelect">
-          <option value="default">Select</option>
-          <option value="black-widow">Black Widow</option>
-          <option value="avatar">Avatar</option>
-          <option value="joker">Joker</option>
-          <option value="planet-of-apes">Planet of the Apes</option>
-          <option value="wakanda-forever">Wakanda Forever</option>
-      </select>
+        <option value="default">Select</option>
+        <option value="Attack on Titan">Attack on Titan</option>
+        <option value="Black Widow">Black Widow</option>
+        <option value="Joker">Joker</option>
+    </select>
+    
     </div>
     </header>
 
     <main>
-
+        
+        <!-- Select 1 -->
         <section class="booking_form">
             <div class="poster_container">
-                <div class="posterdiv">
-                    <img id="moviePoster" src="https://kodionconsulting.com/portals/0/images/resource/ticket-booking-500x500.jpg" alt="Movie Poster" style="width: 280px; height: 280px; border-radius: 50%;">
-                    <i class="fa-solid fa-arrow-right arrowright"></i>
-                </div>
-                <div class="poster_summary">
-                    <h3>Movie Name</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, exercitationem sit. Magnam, quaerat. Vitae, sequi id exercitationem vero libero sit sint necessitatibus ipsa repudiandae fuga dolorum molestias temporibus blanditiis. Tempora?</p>
-                    <p class="movieduration">
-                        <span class="span1">120 MIN</span>
-                        <span class="span2">|</span> 
-                        <span class="span3">Action</span> 
-                    </p>
-                    <div class="price_trailer">
-                        <span>Price</span>
-                        <button>Watch Trailer</button>
+                <div class="poster_wrapper">
+                    <div class="posterdiv" 
+                        data-movie-name="Attack on Titan"
+                        data-movie-summary="A thrilling action-packed anime where humanity fights against Titans."
+                        data-movie-duration="120 MIN"
+                        data-movie-genre="Action, Adventure"
+                        data-movie-price="$15">
+                        
+                        <img id="moviePoster" src="https://kodionconsulting.com/portals/0/images/resource/ticket-booking-500x500.jpg" 
+                             alt="Movie Poster" style="width: 280px; height: 280px; border-radius: 50%;">
+                        <i class="fa-solid fa-arrow-right arrowright"></i>
+                    </div>
+                    <div class="poster_summary">
+                        <h3>Movie Name</h3>
+                        <p>Movie description will appear here.</p>
+                        <p class="movieduration">
+                            <span class="span1">--</span>
+                            <span class="span2">|</span> 
+                            <span class="span3">--</span> 
+                        </p>
+                        <div class="price_trailer">
+                            <span>Price</span>
+                            <button>Watch Trailer</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Select 2 -->
+            <div class="poster_container">
+                <div class="poster_wrapper">
+                    <div class="posterdiv" 
+                        data-movie-name="Black-Widow"
+                        data-movie-summary="A thrilling action-packed movie"
+                        data-movie-duration="120 MIN"
+                        data-movie-genre="Action, Adventure"
+                        data-movie-price="$15">
+                        
+                        <img id="moviePoster" src="https://kodionconsulting.com/portals/0/images/resource/ticket-booking-500x500.jpg" 
+                             alt="Movie Poster" style="width: 280px; height: 280px; border-radius: 50%;">
+                        <i class="fa-solid fa-arrow-right arrowright"></i>
+                    </div>
+                    <div class="poster_summary">
+                        <h3>Movie Name</h3>
+                        <p>Movie description will appear here.</p>
+                        <p class="movieduration">
+                            <span class="span1">--</span>
+                            <span class="span2">|</span> 
+                            <span class="span3">--</span> 
+                        </p>
+                        <div class="price_trailer">
+                            <span>Price</span>
+                            <button>Watch Trailer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Select 3 -->
+            <div class="poster_container">
+                <div class="poster_wrapper">
+                    <div class="posterdiv" 
+                        data-movie-name="Joker"
+                        data-movie-summary="A thrilling action-adventure movie"
+                        data-movie-duration="120 MIN"
+                        data-movie-genre="Action, Adventure"
+                        data-movie-price="$15">
+                        
+                        <img id="moviePoster" src="https://kodionconsulting.com/portals/0/images/resource/ticket-booking-500x500.jpg" 
+                             alt="Movie Poster" style="width: 280px; height: 280px; border-radius: 50%;">
+                        <i class="fa-solid fa-arrow-right arrowright"></i>
+                    </div>
+                    <div class="poster_summary">
+                        <h3>Movie Name</h3>
+                        <p>Movie description will appear here.</p>
+                        <p class="movieduration">
+                            <span class="span1">--</span>
+                            <span class="span2">|</span> 
+                            <span class="span3">--</span> 
+                        </p>
+                        <div class="price_trailer">
+                            <span>Price</span>
+                            <button>Watch Trailer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             
         </section>
 

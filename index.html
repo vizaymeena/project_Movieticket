@@ -14,28 +14,37 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Google Font Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  
-  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
 
 </head>
-<body>
+<body style="scroll-behavior: smooth;" id="body">
     <header id="header">
         
         <nav class="nav">
             <div class="m-heading">
-              <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+              <div class="hamburger">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+              </div>
+        
                 <h1>Entertainment</h1>
             </div>
            
             <!-- Anchor links -->
             <div class="navlinks">
-               <a href="">Home</a>
-               <a href="">Movies</a>
-               <a href="">Ongoing</a>
-               <a href="">Trending</a>
-            </div>
+               <a href="#home">Home</a>
+               <a href="#ongoing">Ongoing</a>
+               <a href="#trending_shows">Trending</a>
+               <a href="#movies">Coming Soon</a>
+               <a href="#about_section">About us</a>
+            </div> 
+
+
+            
+            
+
+
             <!-- Search Sign up -->
             <div class="owl"> 
                  <input type="text" placeholder="search..." class="inputsearch">
@@ -77,7 +86,7 @@
                  <span>  They are targeted by a dangerous creature called a Xenophage.</span> 
                 </p>
                 <div class="btn">
-                   <a href="" class="btn-book">Book Now</a>
+                   <a href="book.html" class="btn-book">Book Now</a>
                 </div>
                 <div class="btn-play">
                   <i class="fa-solid fa-play"></i> 
@@ -325,7 +334,12 @@
            <!-- 1 A.O.T -->
           <div class="swiper-slide trending_slides">  
             <img src="https://wallpapers-clan.com/wp-content/uploads/2024/05/attack-on-titan-mikasa-red-desktop-wallpaper-preview.jpg" alt="movie-image">
-            <div class="hovericon_plus"> <i class="fa-solid fa-plus plusicon"></i> </div>
+            <div class="hovericon_plus"> 
+              <i class="fa-solid fa-plus plusicon"></i> 
+            </div>
+            <div class="hovericon_minus">
+              <i class="fa-solid fa-minus minusicon"></i>
+            </div>
             <div class="Movie">
               <div class="moviename"> <span> Attack On Titan</span> </div>
               <div class="ratings"> 
@@ -348,7 +362,12 @@
           <!-- 2 SOLO LEVELING -->
           <div class="swiper-slide trending_slides">  
             <img src="https://wallpaperaccess.com/full/3231246.png" alt="movie-image">
-            <div class="hovericon_plus"> <i class="fa-solid fa-plus plusicon"></i> </div>
+            <div class="hovericon_plus"> 
+              <i class="fa-solid fa-plus plusicon"></i> 
+            </div>
+            <div class="hovericon_minus">
+              <i class="fa-solid fa-minus minusicon"></i>
+            </div>
             <div class="Movie">
               <div class="moviename"> <span> Solo Leveling </span> </div>
               <div class="ratings"> 
@@ -371,7 +390,12 @@
           <!-- 3 JHON WICK -->
           <div class="swiper-slide trending_slides">  
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTFcW2iEHH77xYfImRoco4L-XIs0glimMlpq1e-J-gvb2y1ftwzSHjHGWYfBx5uMKZr5ydhhHRCmO-Mr9JKcTz0z2jYlNcNBrznlOoUH9hM8Mhn_IGmhxllj1FLGTpaxRMhmCKL8jOmjJC/w0/john-wick-uhdpaper.com-4K-16.jpg" alt="movie-image">
-            <div class="hovericon_plus"> <i class="fa-solid fa-plus plusicon"></i> </div>
+            <div class="hovericon_plus"> 
+              <i class="fa-solid fa-plus plusicon"></i> 
+            </div>
+            <div class="hovericon_minus">
+              <i class="fa-solid fa-minus minusicon"></i>
+            </div>
             <div class="Movie">
               <div class="moviename"> <span> JHON WICK </span> </div>
               <div class="ratings"> 
@@ -394,7 +418,12 @@
           <!-- 4 KUNG_FU PANDA -->
           <div class="swiper-slide trending_slides">  
             <img src="https://wallpapercat.com/w/full/1/1/b/2092552-1920x1080-desktop-1080p-kung-fu-panda-3-background-image.jpg" alt="movie-image">
-            <div class="hovericon_plus"> <i class="fa-solid fa-plus plusicon"></i> </div>
+            <div class="hovericon_plus"> 
+              <i class="fa-solid fa-plus plusicon"></i> 
+            </div>
+            <div class="hovericon_minus">
+              <i class="fa-solid fa-minus minusicon"></i>
+            </div>
             <div class="Movie">
               <div class="moviename"> <span> KUNG-FU PANDA 3</span> </div>
               <div class="ratings"> 
@@ -417,7 +446,12 @@
           <!-- 5 JUJUTSU KAISEN -->
           <div class="swiper-slide trending_slides">  
             <img src="https://wallpapers.com/images/hd/jujutsu-kaisen-desktop-fgf97n0e39hoykf6.jpg" alt="movie-image">
-            <div class="hovericon_plus"> <i class="fa-solid fa-plus plusicon"></i> </div>
+            <div class="hovericon_plus"> 
+              <i class="fa-solid fa-plus plusicon"></i> 
+            </div>
+            <div class="hovericon_minus">
+              <i class="fa-solid fa-minus minusicon"></i>
+            </div>
             <div class="Movie">
               <div class="moviename"> <span>JUJUTSU KAISEN ARC 2</span> </div>
               <div class="ratings"> 
@@ -440,7 +474,12 @@
           <!-- 6 DEADPOOL -->
           <div class="swiper-slide trending_slides">  
             <img src="https://wallpapers.com/images/hd/deadpool-on-a-chair-hollywood-movie-wq0wtfbvoiamd1w7.jpg" alt="movie-image">
-            <div class="hovericon_plus"> <i class="fa-solid fa-plus plusicon"></i> </div>
+            <div class="hovericon_plus"> 
+              <i class="fa-solid fa-plus plusicon"></i> 
+            </div>
+            <div class="hovericon_minus">
+              <i class="fa-solid fa-minus minusicon"></i>
+            </div>
             <div class="Movie">
               <div class="moviename"> <span> DEADPOOL </span> </div>
               <div class="ratings"> 
@@ -463,7 +502,12 @@
           <!-- 7 P.O.P -->
           <div class="swiper-slide trending_slides">  
             <img src="https://c4.wallpaperflare.com/wallpaper/840/876/23/wonder-woman-dc-comics-gal-gadot-sword-wallpaper-preview.jpg" alt="movie-image">
-            <div class="hovericon_plus"> <i class="fa-solid fa-plus plusicon"></i> </div>
+            <div class="hovericon_plus"> 
+              <i class="fa-solid fa-plus plusicon"></i> 
+            </div>
+            <div class="hovericon_minus">
+              <i class="fa-solid fa-minus minusicon"></i>
+            </div>
             <div class="Movie">
               <div class="moviename"> <span>WONDER WOMEN</span> </div>
               <div class="ratings"> 

@@ -1,7 +1,7 @@
 /* styles.css */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #96290e, #08070a);
+    background: linear-gradient(to right,rgb(54, 50, 108),black);
     margin: 0;
     height: 100vh;
     display: flex;
@@ -13,7 +13,7 @@ body {
 #container {
     position: relative;
     z-index: 1;
-    background: linear-gradient(to right,brown,black);
+    background: linear-gradient(to right,rgb(54, 50, 108),black);
     border: 2px solid rgba(255, 255, 255, 0.975);
     backdrop-filter: blur(10px);
     box-shadow: 5px 5px 10px black;
@@ -79,11 +79,13 @@ body {
 }
 /* Sign Up button */ 
 #sign_up {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
     width: 100%;
     padding: 12px 0;
     background: black;
     border: 2px solid white;
-    border-radius: 30px;
     font-size: 16px;
     font-weight: bold;
     color: white;
@@ -93,7 +95,26 @@ body {
 
 #sign_up:hover {
     transform: translateY(-3px);
+    width: 220px;
+    border-radius: 15px;
+   
+}
+#sign_up::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateY(-100%);
     background-color: rgb(16, 58, 16);
+    transition: 0.6s ease-in-out;
+}
+#sign_up:hover::after{
+    transform: translateY(0%);
 }
 
 .acc_mssg {

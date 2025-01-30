@@ -25,7 +25,8 @@
   
         erroremail.placeholder = "Please fill up username";       // error shows in placeholders
         erroremail.style.borderColor="red"
-        erroremail.classList.add("input_bg_color")              // placeholder text-color
+        errorpassword.style.color="red";
+        erroremail.classList.add("input_bg_color")              // classlist for placeholder text color
         return false;                                          // do not submit form if condition doesn't matches.
   }
 
@@ -35,19 +36,30 @@
 
           erroremail.placeholder = "Invalid email format";
           erroremail.style.borderColor="red"
+          errorpassword.style.color="red";
           erroremail.classList.add("input_bg_color")
           return false;
     }
-     
-    else if (inp_email!==stored_email){                                               // Incorrect email entered
+    /* Incorrect email  */
+    else if (inp_email!==stored_email){                                              
       erroremail.placeholder="email does not match"
+      errorpassword.style.borderColor="red";
+      errorpassword.style.color="red";
       erroremail.classList.add("input_bg_color")
+      return false
     }
 
-     /* ========================================= Password Conditions =========================================== */
+     /*  Password Conditions starts */
 
+     else if(inp_password==""){
+      errorpassword.placeholder="empty field"
+      errorpassword.style.borderColor="red";
+      errorpassword.style.color="red";
+      errorpassword.classList.add("input_bg_password")
+      return false;
+     }
 
-    /* when password does not have number and letters combo in it  */
+    /* Numbers and letter combos  */
     else if 
       (!((inp_password.match(/[1234567890]/)) && 
       (inp_password.match(/[a-z]/)) &&
@@ -58,7 +70,7 @@
           errorpassword.style.borderColor="red";
           errorpassword.style.color="red";
           errorpassword.classList.add("input_bg_password")
-          return false;;
+          return false;
        }
         
 
@@ -73,8 +85,9 @@
        else if (inp_password!==stored_password){
         errorpassword.placeholder="Password does not match";
         errorpassword.classList.add("input_bg_color");
+        return false
        }
-  //==================================================  P. ENDS  ===============================================//
+  /* Password Conditions ends */
        
 
   // Reset errors
@@ -84,13 +97,44 @@
     e.classList.remove("input_bg_password");
   })
 
-
-
-     location.href="index.html";                // Redirecting to Home Page..
-     return true;                              // optional as it will run obivously after above condition gets true 
-
-  
+  /* Redirecting to home page */
+  location.href="index.html";   
+  return false;
           
-  }
+}
 
-  
+
+
+/* Resetting password */
+
+
+ // Shows popup
+let resetPopup = () => {
+  let reset = document.getElementById("popcontainer"); 
+  reset.style.display = "block";
+};
+
+// Hides Popup
+let resetPopdown = () => {
+  let pop_box = document.getElementById("popcontainer"); 
+  pop_box.style.display = "none";
+};
+
+// Send reset link function
+let sendResetLink = () => {
+  let email = document.getElementById("reset_email").value;
+  if (email === "") {
+      alert("Please enter your email.");
+  } else {
+      alert("A password reset link has been sent to " + email);
+      resetPopdown();
+  }
+};
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  let popcontainer = document.getElementById("popcontainer");
+  if (event.target === popcontainer) {
+      resetPopdown();
+  }
+};

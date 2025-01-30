@@ -29,6 +29,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.poster_wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
 }
 .posterdiv{
     height: 300px;
@@ -49,18 +59,19 @@ body{
     color: white;
     cursor: pointer;
     opacity: 0.7;
-    /* transition: 1s all ease; */
+    transition: 1s all ease;
 }
 .arrowright:hover{
     opacity: 1;
-    /* transform: translateX(10px); */
+    transform: translateX(10px);
 }
 
 .booking_form{                                         /* section class */
     height: 50vh;
     width: 90%;
     margin: auto;
-    /* border: 2px solid green; */
+    position: relative;
+    z-index: 1;
 }
 
 .poster_summary{

@@ -2,7 +2,6 @@
 
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -13,13 +12,17 @@
     margin: 0;
     padding: 0;
     display: flex;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
 
 }
 
 form {
+    
+    margin-top: 2.3em;
     background: linear-gradient(to right,rgb(18, 20, 48),black);
     padding: 20px;
     border-radius: 8px;
@@ -28,10 +31,14 @@ form {
     max-width: 500px;
 }
 
+
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    height: 85vh;
+
+
 }
 .name{
     display: flex;
@@ -88,27 +95,23 @@ input:focus, select:focus {
 }
 
 
-#show{
-  height: 50vh;
-  width: 80%;
-  margin: auto;
-  border: 2px solid red;
-  background-color: white;
-
-}
-
 
 /* javascript GET html structure */
 
 .table-container {
+  
     max-width: 100%;
-    margin: 0 auto;
+    margin: 3em auto auto auto;
     overflow-x: auto;
-    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     max-height: fit-content;
   }
   
   table {
+    
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -116,6 +119,7 @@ input:focus, select:focus {
   }
   
   thead {
+    
     background-color: #343a40;
     color: #fff;
   }
@@ -155,3 +159,120 @@ input:focus, select:focus {
       padding: 8px;
     }
   }
+
+
+
+/* Update form cc */
+  
+.arrowback_up {
+  color: white;
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  transition: 0.7s ease-in-out;
+  cursor: pointer;
+}
+.arrowback_up:hover{
+  transform: translateX(-14px) scale(1.2);
+}
+
+#form2 {
+  width: 100%;
+  min-width: 360px;
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-group2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group2 h2{
+  color: gray;
+  margin-left: 0.5em;
+}
+
+/* Name fields */
+.name {
+  display: flex;
+  gap: 10px;
+}
+
+.name div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Input fields */
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Date and Persons section */
+.ddp {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ddp .person, .ddp .date1 {
+  flex: 1;
+}
+
+/* Seat and Price styling */
+
+.seatnum1 {
+  color: aqua;
+}
+
+.price1 span {
+  color: #5cb85c;
+  font-size: 18px;
+}
+
+/* Submit button */
+#submit1 {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+#submit1:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+  .name {
+      flex-direction: column;
+  }
+
+  .ddp {
+      flex-direction: column;
+  }
+}

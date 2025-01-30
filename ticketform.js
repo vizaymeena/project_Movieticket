@@ -1,3 +1,8 @@
+
+
+
+
+
 /* CRUD OPERATIONS STARTS HERE */
 
 /* GET METHOD */
@@ -16,14 +21,13 @@ let fetchData = async () => {
       dataTranslate.forEach((e) => {
           table.innerHTML += `
            
-         <thead>
+         <thead id="thead" >
         <tr class="headkey">
           <th>First Name</th>
           <th>Last Name</th>
           <th>Age</th>
           <th>Persons</th>
           <th>Date</th>
-          <th>Day</th>
           <th>Contact</th>
           <th>Meals</th>
           <th>Seat</th>
@@ -37,13 +41,12 @@ let fetchData = async () => {
              <td> ${e.age} </td>
              <td> ${e.person} </td>
              <td> ${e.date} </td>
-             <td> ${e.day} </td>
              <td> ${e.contact} </td>
              <td> ${e.meals} </td>
              <td> ${e.seat} </td>
              <td> ${e.price} </td>
              <td onclick="update('${e.id}')"> Edit </td>
-             <td onclick="cancel('${e.id}')"> Cancel </td>
+             <td onclick="confirmcancel('${e.id}')"> Cancel </td>
         </tr>
       </tbody>
 
@@ -55,7 +58,7 @@ let fetchData = async () => {
 };
 
 
-/* POST METHOD */
+/* PUT METHOD */
 let insert=()=>{
 
 let firstname = document.querySelector("#fullname").value
@@ -63,7 +66,6 @@ let lastname = document.querySelector("#lastname").value
 let age = document.querySelector("#age").value
 let person = document.querySelector("#person").value
 let date = document.querySelector("#date").value
-let day = document.querySelector("#day").value
 let contact = document.querySelector("#contact").value
 let meals = document.querySelector("#meals").value
 let seat = document.querySelector(".seat")
@@ -86,7 +88,6 @@ let url = 'http://localhost:3000/movieTicket'   // json url
         "person":person,
         "age":age,
         "date":date,
-        "day":day,
         "contact":contact,
         "meals":meals,
         "seat":seat,
@@ -94,45 +95,135 @@ let url = 'http://localhost:3000/movieTicket'   // json url
       }
     )
 })
+
 return false // do not refresh the page
 
 }
-
 
 /* Cancel Method */
 
 let cancel = (id) => {
   let url = `http://localhost:3000/movieTicket/${id}`; // Corrected URL
-  fetch(url, { method: "DELETE" }) // Fixed fetch syntax
-  return false
-      
+  fetch(url, { method: "DELETE" }) // Fixed fetch syntax  
 };
+
+let confirmcancel=(id)=>{
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete it!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      cancel(id)
+      Swal.fire({
+        title: "Deleted!",
+        text: "Your file has been deleted.",
+        icon: "success"
+      });
+    }
+  });
+}
+
+
 
 /* Edit Method */
 
 let update=async(id)=>{
 
- let url=`http://localhost:3000/Movie/${id}`
- let res=  await fetch(url,{method:"GET"})
- let data=await res.json()
+   
+  let url = `http://localhost:3000/movieTicket/${id}`; // Corrected URL
+
+ let res =  await fetch(url,{method:"GET"})
+
+ let data = await res.json()
 
  let show=document.querySelector("#show")
  
  show.innerHTML=`
 
- <div id="firstname1">'${data.firstname}'</div>
- <div id="lastname1">'${data.lastname}'</div>
- <div id="age1">'${data.age}'</div>
- <div id="contact1">'${data.contact}'</div>
- <div id="day1">'${data.day}'</div>
- <div id="date1">'${data.date}'</div>
- <div id="meals1">'${data.meals}'</div>
- <div id="seat1">'${data.seat}'</div>
- <div id="price1">'${data.price}'</div>
- <div id="person1">'${data.person}'</div>
- <input type="text" value="submit" onclick="update('${data.id}')">
+   <form id="form2"  action="">
+  <div class="form-group2">
 
- ` 
+      
+      <h2> <span><i class="fa-solid fa-arrow-left arrowback_up"></i> </span> Edit Details </h2>
+     
+      <!-- name -->
+      <div class="name">
+          <div>
+             <label for="fullname1">First Name:</label>
+             <input value="${data.firstname}" type="text" id="fullname1">
+          </div>
+          <div>
+             <label for="lastname1">Last Name:</label>
+             <input value="${data.lastname}" type="text" id="lastname1">
+          </div>
+      </div>
+      <!-- age -->
+      <label for="age1">Age:</label>
+      <input value="${data.age}" type="number" id="age1">
+  <!-- Day Date Persons -->
+  <div class="ddp">
+      <div class="person">
+       <label for="person1">Persons:</label>
+       <select value="${data.person}" name="noofpersons" id="person1">
+          <option value="default">Select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+       </select>
+      </div>
+      <div class="date1">
+       <label for="date1">Date:</label>
+       <input value="${data.date}" type="date" id="date1">
+      </div>
+     
+      </div>
+      <!-- Contact -->
+      <label for="contact">Contact:</label>
+      <input value="${data.contact}" type="number" id="contact1">
+      <!-- Meals -->
+      <label for="meals1">Meals:</label>
+      <select value="${data.meals}" name="meals" id="meals1">
+          <option value="default">None</option>
+          <option value="Popcorn">Popcorn</option>
+          <option value="colddrink">Cold Drink</option>
+          <option value="water">Water Bottle</option>
+      </select>
+      <!-- Seat -->
+      <div class="seat1">Seat: <span class="seatnum1">A1</span></div>
+      <!-- Price -->
+      <div class="price1">Price: <span><i class="fa-solid fa-indian-rupee-sign"></i> 300 / person</span></div>
+
+      <input id="submit1" type="submit" onclick="return finalupdate('${data.id}')">
+
+  </div>   
+</form> 
+
+
+ `
+ /* Goback Function */
+ 
+let goback = document.querySelector(".arrowback_up");
+
+    goback.addEventListener('click',()=> {
+        goback.classList.add(".aarowback_up")
+         location.href = "#thead";  
+
+    });
+
+ location.href="#form2"
+
 }
 
 
@@ -145,7 +236,7 @@ let finalupdate=(id)=>{
   let age = document.querySelector("#age1").value
   let person = document.querySelector("#person1").value
   let date = document.querySelector("#date1").value
-  let day = document.querySelector("#day1").value
+
   let contact = document.querySelector("#contact1").value
   let meals = document.querySelector("#meals1").value
   let seat = document.querySelector(".seat1")
@@ -167,15 +258,15 @@ let finalupdate=(id)=>{
               age:age,
               person:person,
               date:date,
-              date:date,
               contact:contact,
               meals:meals,
-              seat:seat,
+              seat: Array.from({ length: 10 }, () => Math.floor(Math.random() * 51)),
               price:300*person
           }
       )
 }
   )
+  location.href="#thead"
 }
 
 

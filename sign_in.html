@@ -6,22 +6,28 @@
     <title>Sign In</title>
     <link rel="stylesheet" href="sign_in.css">
     <!-- Aos sheet -->
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Charm:wght@400;700&family=Festive&family=Merienda:wght@300..900&family=Monsieur+La+Doulaise&family=Nothing+You+Could+Do&family=Playwrite+VN:wght@100..400&family=Radley:ital@0;1&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
    
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 </head>
 <body id="page1">
     <!-- container for login credentials  -->
-    <div class="container"  data-tilt >
+    <div class="container">
         <form class="sign_in_form">
+            <p><img class="signin_png" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq8uQ5-1MzoSskLhm-xGab5TECH0f27m2uqyEEkq4vHsYCJi1vBLapngkUuM0m392V3U4&usqp=CAU" alt=""></p>
             <h2>Login</h2>
             <!-- username informations -->
             <div class="cred">
-                <label for="email">Email</label>
+                <label for="email">Email :</label>
                 <input type="text" id="email" placeholder="Enter your email" required>
             </div>
             <!-- password informations -->
             <div class="cred">
-                <label for="password">Password</label>
+                <label for="password">Password :</label>
                 <input type="text" id="password" name="password" placeholder="Enter your password" required>
             </div>
             <!-- action functionable buttons -->
@@ -32,19 +38,24 @@
                </div>
                <div>
                 <!-- Forget password(); function -->
-                <a href="#">Forgot Password?</a>
+                <a href="#" id="reset" onclick="resetPopup()">Forgot Password?</a>
                </div>
             </div>
             <div><p id="newacc"><a href="sign_up.html">Don't have an account ?</a></p></div>
         </form>
     </div>
 
-    <!-- Vanta Js -->
-   
-    <!-- Tilt Js -->
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
-   
-   
+    <!-- Password Reset Modal -->
+    <div id="popcontainer" class="pop_box">
+        <div class="pop_content">
+            <span class="close" onclick="resetPopDown()"><i class="fa-solid fa-xmark closemark"></i></span>
+            <h2>Reset Password</h2>
+            <p>Enter your email to receive a password reset link.</p>
+            <input type="email" id="reset_email" placeholder="Enter your email" required>
+            <button class="resetlink" onclick="sendResetLink()">Send Reset Link</button>
+        </div>
+    </div>
+
 
     <!-- sing in js -->
     <script src="sign_in.js" > </script>

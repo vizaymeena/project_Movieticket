@@ -1,7 +1,4 @@
-/* Montserrat Google font via import */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap');
 
-/* color codes  red */
 *{
     margin: 0;
     padding: 0;
@@ -10,15 +7,17 @@
 body{
   font-family: "Montserrat","Poppins","Bodoni","Garamond";
   /* background: black; */
+  
 }
 
 .hamburger{
     display: none;
+    cursor: pointer;
 }
 #header{
-    /* position: sticky;
+    position: sticky;
     top: 0;
-    z-index: 1000; */
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +25,7 @@ body{
     padding: 0.5em;
     display: flex;
     flex-direction: column;
-    background-color:black;
+    background-color:rgba(0, 0, 0, 0.833);
     
 }
 .m-heading{
@@ -47,12 +46,21 @@ body{
     gap: 50px;
 }
 
+.navlink .active{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+  align-items: center;
+
+}
 .navlinks{
     height: 100%;
     align-items: center;
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: fit-content;
     overflow: hidden;
     display:flex;
     gap: 30px;
@@ -60,7 +68,7 @@ body{
 .navlinks a{
   font-family: "Macondo";
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-size: 20px;
     color: white;
     transition: 1s all ease;
@@ -70,7 +78,8 @@ body{
     overflow: hidden;
 }
 .navlinks a:hover{
-    color: rgb(28, 114, 38);
+    color: orange;
+    font-family: "Festive", serif;
     
     transform: translateY(-5px) scale(1.05);
 }
@@ -152,6 +161,7 @@ body{
   font-weight: 400;
   font-style: normal;
   font-style: italic;
+  background: black;
 }
 .container {
   width: 100%;
@@ -321,13 +331,14 @@ body{
   width: 100%;
   height: fit-content;
   /* background:linear-gradient(to right,rgb(126, 6, 6),rgb(10, 9, 9)); */
-  background: linear-gradient(to right,rgb(138, 78, 78),black);
+  background: linear-gradient(to right,rgb(97, 17, 11),rgb(41, 7, 7));
   color: red;
 }
  .heading {
-  color: black;
+  color: white;
   margin-top: 1em;
   margin-left: auto;
+  font-family: "Festive";
   margin-right: auto;
   max-width: 800px;
   border-bottom: 2px solid red;
@@ -402,42 +413,85 @@ body{
   font-weight: 500;
   margin-bottom: 1em;
 }
+.ptag-noti {
+  margin: 0;
+  width: 100% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 /*preBook button*/
-.btn-prebook{ 
+.btn-prebook,
+.btn-notifyme {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
   margin-top: 1em;
-  margin-bottom: 1em;
+  margin-left: 0.3em;
+  margin-bottom: 0.5em;
   background-color: aliceblue;
   color: rgb(75, 10, 38);
   border-radius: 10px;
   padding: 10px;
-  border:none;
-  transition: 0.6s linear;
+  border: none;
+  transition: 0.6s all ease;
   cursor: pointer;
   font-size: 0.9em;
   font-weight: 750;
   letter-spacing: 1px;
+  text-align: center; /* Center text within the button */
 }
-.btn-prebook:hover{ /*preBook hover */
-  background: yellow;
+
+.btn-prebook:hover {
+  width: 80% !important;
+  
   color: black;
 }
-.btn-notifyme{
-  border-radius:10px;
-  padding: 8px;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  margin-left: 7em;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9em;
-  font-weight: 750;
-  letter-spacing: 1px;
-  transition: 0.6s linear;
+
+.btn-prebook::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: yellow;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-100%);
+  transition: 0.6s ease-in-out;
+}
+
+.btn-prebook:hover::after {
+  transform: translateY(0%);
+}
+
+
+/* Notify Me */
+.btn-notifyme::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: orangered;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: 0.6s ease-in-out;
+}
+.btn-notifyme:hover::after {
+  transform: translateY(0%);
 }
 .btn-notifyme:hover{
-background-color: orangered;
-color: white;
+  width: 80%;
+  color: white;
 }
 /* Bell-icon */
 .bell-icon{     
@@ -486,8 +540,9 @@ color: white;
 } 
 /* classlist for heart-icon */
 .p-heart i {
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;   
 }
+
 /* heart hover */
 .p-heart:hover i {
   font-family: "Font Awesome 6 Free"; /* Required for Font Awesome solid icons */
@@ -585,6 +640,42 @@ color: white;
 /* Plus:hover ends */
 
 
+.hovericon_minus{
+  display: none;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  border: 2px solid white;
+  background-color: #1010108e;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 900;
+  
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: color 1s ease;
+}
+.minusicon{
+  text-align: center;
+  
+  transition: transform 1s ease;
+}
+ /* + rotation 360deg */  
+.hovericon_minus:hover .minusicon{
+   transform: rotate(-360deg);     
+}
+/* Plus Icon Hover color on div */
+.hovericon_minus:hover{
+  background-color: green;
+   color: white;
+}
+
+
 /* div2 */
 .Movie{
   margin-top: 10em;
@@ -624,7 +715,9 @@ color: white;
 /* Buttons */
 .trending_btn{
   display: flex;
+  justify-content: space-between;
   gap: 100px;
+  transition: 1s ease-in-out;
 }
 .trend_book-btn{
   margin-bottom: 0.5em;
@@ -666,11 +759,14 @@ color: white;
 #ongoing{
   height: 100vh;
   width: 100%;
+  background: linear-gradient(to right,rgb(150, 15, 15),black);
 }
 .ongoing_heading{
-  color: black;
+  color: white;
   width: 80%;
-  margin:0 auto;
+  margin: 0 auto;
+  font-size: 30px;
+  
   border-bottom: 2px solid red;
 }
 
@@ -742,6 +838,11 @@ color: white;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.8s ease-in-out;
+  cursor: pointer;
+}
+.nestedIMG img:hover{
+  transform: scale(1.2);
 }
 
 .autoplay-progress {
@@ -1141,11 +1242,7 @@ color: white;
   /* Home section slider ends */
 
   /* Upcoming Grid Starts */
-  .ptag-noti{
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-  } 
+  
   .heading{
     font-family: "Merienda", serif;
     width: fit-content;
@@ -1286,3 +1383,26 @@ color: white;
 
 }
   
+
+@media (min-width:360px) and (max-width:500px){
+  .menu {
+    display: block;
+  }
+
+  .navul {
+    display: none;
+    flex-direction: column;
+    background-color: #0c5d69;
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    width: 90%;
+    border-radius: 8px;
+    padding: 10px;
+    padding-bottom: 35%;
+  }
+
+  .navul.active {
+    display: flex;
+    }
+}

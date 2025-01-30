@@ -1,22 +1,60 @@
-/* Main Swiper */
+// /* Hamburger */
+
+//   let ham = document.querySelector('.hamburger')
+//   let navlinks = document.querySelector('.navlinks')
+//   ham.addEventListener('click',()=>{
+
+//     if(navlinks.style.display="none"){
+//       navlinks.style.display="block"
+//       navlinks.classList.add('.active')
+//     }
+//   })
+
+
+
+  
+
+
+/* JS for smooth scrool behaviour */
+const navLinks = document.querySelectorAll('.navlinks a');
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    event.preventDefault(); 
+
+    const targetId = link.getAttribute('href').substring(1); // Remove the "#"
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+
+
+/* Header slider js */
 var swiper = new Swiper(".home", {
   spaceBetween: 10,
   centeredSlides: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true
   },
 });
 
-//
-/* Trending shows */
+
+/* Trending shows slider js */
 var trendingShows = new Swiper(".trendingSwiper", {
-  slidesPerView: 1, // Default to 1 slide for small screens
-  spaceBetween: 30, // Default space between slides
+  slidesPerView: 1, 
+  spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -44,7 +82,7 @@ var trendingShows = new Swiper(".trendingSwiper", {
   },
 });
 
-//
+/* Ongoing shows slider js  */
 var swiper = new Swiper(".ongoingSwiper", {
   pagination: {
     el: ".swiper-pagination",
@@ -104,16 +142,6 @@ var swiper3 = new Swiper(".mySwiper3", {
 });
 
 
-/* Typed Js Demo */
-var typed1 = new Typed('class / id name', {
-  strings: ['<i>This Week</i>','<i>Get Ready for Fun</i>'],
-  typeSpeed: 50,
-  backSpeed: 50,
-  startDelay:1000,
-  fadeOutClass: 'typed-fade-out',
-  loop:true,
-});
-
 /* waves */
 let playbutton = document.querySelector('.btn-play');
 
@@ -126,7 +154,35 @@ playbutton.addEventListener('onmouseleave', () => {
 });
 
 
+/* Plus and Minus  */
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".trending_slides").forEach((e) => {
+      let plusIconDiv = e.querySelector(".hovericon_plus");
+      let minusIconDiv = e.querySelector(".hovericon_minus");
+      let buttonsContainer = e.querySelector(".trending_btn");
+
+      // Initially hide elements
+      minusIconDiv.style.display = "none";
+      buttonsContainer.style.opacity = "0";
+      buttonsContainer.style.maxHeight = "0px";
+      buttonsContainer.style.overflow = "hidden";
+      buttonsContainer.style.transition = "max-height 1s ease, opacity 1s ease";
+
+      plusIconDiv.addEventListener("click", function () {
+          plusIconDiv.style.display = "none";
+          minusIconDiv.style.display = "flex";
+          buttonsContainer.style.maxHeight = "100px"; // Adjust height based on content
+          buttonsContainer.style.opacity = "1";
+      });
+
+      minusIconDiv.addEventListener("click", function () {
+          minusIconDiv.style.display = "none";
+          plusIconDiv.style.display = "flex";
+          buttonsContainer.style.maxHeight = "0px";
+          buttonsContainer.style.opacity = "0";
+      });
+  });
+});
 
 
-
-/* media query */
