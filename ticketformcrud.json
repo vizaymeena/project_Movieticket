@@ -1,19 +1,6 @@
 {
   "movieTicket": [
     {
-      "id": "ab78",
-      "firstname": "Jatin",
-      "lastname": "Parmar",
-      "person": "4",
-      "age": "25",
-      "date": "2025-01-23",
-      "day": "default",
-      "contact": "123456789",
-      "meals": "colddrink",
-      "seat": {},
-      "price": 1200
-    },
-    {
       "id": "58a0",
       "firstname": "Yash",
       "lastname": "Agarwal",
@@ -133,42 +120,6 @@
       "meals": "Popcorn",
       "seat": {},
       "price": 600
-    },
-    {
-      "id": "a67f",
-      "firstname": "",
-      "lastname": "",
-      "person": "default",
-      "age": "",
-      "date": "",
-      "contact": "",
-      "meals": "default",
-      "seat": {},
-      "price": null
-    },
-    {
-      "id": "4648",
-      "firstname": "",
-      "lastname": "",
-      "person": "default",
-      "age": "",
-      "date": "",
-      "contact": "",
-      "meals": "default",
-      "seat": {},
-      "price": null
-    },
-    {
-      "id": "57ed",
-      "firstname": "",
-      "lastname": "",
-      "person": "default",
-      "age": "",
-      "date": "",
-      "contact": "",
-      "meals": "default",
-      "seat": {},
-      "price": null
     }
   ]
 }

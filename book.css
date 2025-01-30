@@ -401,6 +401,7 @@ body{
  header{
     width: 100%;
  }
+
 .container{
     background: linear-gradient(to right,rgb(55, 55, 137),black);
     height: 6em;

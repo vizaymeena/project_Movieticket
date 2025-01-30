@@ -1,14 +1,23 @@
-// /* Hamburger */
+/* Hamburger */
 
-//   let ham = document.querySelector('.hamburger')
-//   let navlinks = document.querySelector('.navlinks')
-//   ham.addEventListener('click',()=>{
+  let ham = document.querySelector('.hamburger')
+  let header = document.querySelector('#header')
+  let navlinks = document.querySelector('.navlinks')
+  ham.addEventListener('click',()=>{
 
-//     if(navlinks.style.display="none"){
-//       navlinks.style.display="block"
-//       navlinks.classList.add('.active')
-//     }
-//   })
+    if(navlinks.style.display="none"){
+      navlinks.style.display="block"
+      header.classList.add('headactive')
+      navlinks.classList.add('navactive')
+      
+    }
+    else{
+      // navlinks.classList.add('.deactivenav')
+      navlinks.classList.add('navdeactive')
+      header.classList.remove('headactive')
+      header.classList.add('headdeactive')
+    }
+  })
 
 
 
