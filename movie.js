@@ -1,25 +1,40 @@
-/* Hamburger */
 
-  let ham = document.querySelector('.hamburger')
-  let header = document.querySelector('#header')
-  let navlinks = document.querySelector('.navlinks')
-  ham.addEventListener('click',()=>{
 
-    if(navlinks.style.display="none"){
-      navlinks.style.display="block"
-      header.classList.add('headactive')
-      navlinks.classList.add('navactive')
-      
-    }
-    else{
-      // navlinks.classList.add('.deactivenav')
-      navlinks.classList.add('navdeactive')
-      header.classList.remove('headactive')
-      header.classList.add('headdeactive')
-    }
+/* Hamburger javascript */
+let hamburger=()=>{
+  let crossburger = document.querySelector(".hamburger")
+  let header = document.querySelector(".header")
+  let navlinks = document.querySelector(".navlinks")
+  let navlinks2 = document.querySelector(".navlinks2")
+  let nav_anchor = navlinks.querySelectorAll('navlinks a') 
+  
+  if(crossburger.classList.contains('crossburger')){
+      crossburger.classList.remove('crossburger')
+      header.classList.remove('headeractive')
+      navlinks.classList.remove('activelinks')
+      navlinks2.classList.remove('activelinks2')
+
+  }
+  else{
+      crossburger.classList.add('crossburger')
+      header.classList.add('headeractive')
+      navlinks.classList.add('activelinks')
+      navlinks2.classList.add('activelinks2')
+
+  }
+
+  // Not working 
+      nav_anchor.forEach((e)=>{
+      if(e.nav_anchor.classList.contains('a_visible')){
+
+          e.nav_anchor.classList.remove('a_visible');
+       }
+       else{
+          e.nav_anchor.classList.add('a_visible')
+       }
   })
 
-
+}
 
   
 
