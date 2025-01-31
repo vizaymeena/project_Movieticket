@@ -173,7 +173,7 @@ body{
 
 .navlinks a:hover{
   color: rgb(0, 0, 0);
-  transform: translateY(-7px);
+  transform: translateY(-7px) scale(0.9);
 }
 
 .navlinks a::after{
