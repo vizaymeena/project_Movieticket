@@ -1208,7 +1208,8 @@ body{
       flex-direction: column;
       width: 100%;
       height: 12vh;
-      transition: height 2s ease-in-out; /* for smooth appeareance */
+      
+      transition: height 0.8s ease-in-out; /* for smooth appeareance */
       overflow: hidden;
   }
   /* Active Header */
@@ -1222,40 +1223,38 @@ body{
 
       display: none;
       flex-direction: column;
-  }
-
-  .navlinks a{
       opacity: 0;
-      visibility: hidden;
-      transition: opacity 3s ease-in-out, visibility 2s ease-in-out;
+       visibility: hidden; /* Ensures it's not interactable */
+      transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
+
+      
+    
   }
 
-  /* Anchor tag classlist */
-  .navlinks.a_visible{
-      visibility: visible;
-      opacity: 1;
-  }
+.navlinks a {
+    opacity: 0;
+    visibility: hidden; /* Ensures it's not interactable */
+    transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
+}
+
+/* When the nav is active, make all links visible with opacity */
+.navlinks.a_visible a {
+    visibility: visible;
+    opacity: 1;
+}
 
   .navlinks2{
-      display: none;
       height: 40px;
-      opacity: 0;
-      transition: opacity 2s ease-in-out, height 2s ease-in-out;
+      width: fit-content;
+     
       margin-bottom: 0.5em;
   }
 
   /* Navlinks Classlist */
-  .navlinks.activelinks{
-      display: flex;
-      opacity: 1;
-      width: 100%;
-      height: 500px;
-      
-  }
-  .navlinks2.activelinks2{
-      display: flex;
-      opacity: 1;
-      
+  .navlinks.activelinks {
+    display: inline-flex;
+    opacity: 1;
+    visibility: visible;
   }
   
   
@@ -1269,23 +1268,26 @@ body{
   .hamburger{
       position: absolute;
       z-index: -1;
-      top: 10px;
+      top: 12px;
       left: 0;
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
   }
   .hamburger span{
-      height: 3px;
-      width: 18px;
+      height: 2.5px;
+      width: 16px;
   }
   .webtitle{
-      margin-top: 15px;
+      margin-top: 100px;
       font-size: 20px;
       padding-left: 10px;
   }
 
   .userspanicon{
       position: absolute;
+      z-index: -1;
+      height: 40px;
+      width: 40px;
       top: 10px;
       right: 0;
   }

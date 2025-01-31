@@ -1,40 +1,46 @@
 
 
+let hamburger = document.querySelector(".hamburger")
 /* Hamburger javascript */
-let hamburger=()=>{
+ hamburger.addEventListener('click',()=>{
   let crossburger = document.querySelector(".hamburger")
   let header = document.querySelector(".header")
   let navlinks = document.querySelector(".navlinks")
-  let navlinks2 = document.querySelector(".navlinks2")
-  let nav_anchor = navlinks.querySelectorAll('navlinks a') 
+
+  let nav_anchor = navlinks.querySelector('.a') 
   
   if(crossburger.classList.contains('crossburger')){
       crossburger.classList.remove('crossburger')
       header.classList.remove('headeractive')
       navlinks.classList.remove('activelinks')
-      navlinks2.classList.remove('activelinks2')
+      navlinks.classList.remove('a_visible'); 
+
+     
+      
 
   }
   else{
       crossburger.classList.add('crossburger')
       header.classList.add('headeractive')
       navlinks.classList.add('activelinks')
-      navlinks2.classList.add('activelinks2')
+      navlinks.classList.add('a_visible'); 
+     
+      
 
   }
 
-  // Not working 
-      nav_anchor.forEach((e)=>{
-      if(e.nav_anchor.classList.contains('a_visible')){
+//   // Not working 
+//       nav_anchor.forEach((e)=>{
+//       if(e.nav_anchor.classList.contains('a_visible')){
 
-          e.nav_anchor.classList.remove('a_visible');
-       }
-       else{
-          e.nav_anchor.classList.add('a_visible')
-       }
-  })
+//           e.nav_anchor.classList.remove('a_visible');
+//        }
+//        else{
+//           e.nav_anchor.classList.add('a_visible')
+//        }
+//   })
 
-}
+ })
 
   
 
