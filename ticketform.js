@@ -58,7 +58,7 @@ let fetchData = async () => {
 };
 
 
-/* PUT METHOD */
+/* POST METHOD */
 let insert=()=>{
 
 let firstname = document.querySelector("#fullname").value
