@@ -2,28 +2,24 @@
 body{
     background: linear-gradient();
     background: linear-gradient(to right,rgb(47, 47, 91),rgb(0, 0, 0));
+} .container {
+    margin-bottom: 20px;
 }
-.container{
-    width: 9p 0%;
+#movieDetails {
+    width: 80%;
     margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(to right,rgb(42, 42, 81),rgb(0, 0, 0));
+    padding: 20px;
+    display: none;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
-.container h1{
-    font-family: "Nothing You Could Do", serif;
-    color: white;
-    letter-spacing: 2px;
-    font-weight: 500;
-    font-style: italic;
-}
-#movieSelect{
-    padding: 10px;
-    margin-bottom: 0.4em;
-    border-radius: 15px;
-    color: blue;
+#movieImage {
+    width: 50%;
+    height: 60vh;
+    max-height: 80%;
+    border-radius: 8px;
 }
 .poster_container{
     display: flex;

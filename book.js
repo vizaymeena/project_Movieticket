@@ -1,3 +1,37 @@
+const movieData = {
+  "Attack on Titan": {
+      description: "A world where humanity fights against gigantic Titans for survival.",
+      image: "https://m.media-amazon.com/images/I/71qVgRtdXtL._AC_UF1000,1000_QL80_.jpg"
+  },
+  "Black Widow": {
+      description: "Natasha Romanoff confronts her past as a spy before becoming an Avenger.",
+      image: "https://m.media-amazon.com/images/I/81Jgy1tfvcL._AC_UF1000,1000_QL80_.jpg"
+  },
+  "Joker": {
+      description: "A gritty character study of Arthur Fleck, a man disregarded by society.",
+      image: "https://i.pinimg.com/736x/5b/c2/9c/5bc29c1757c368a9561c79e5eea99f7b.jpg"
+  },
+  "default": {
+      description: "A gritty character study of Arthur Fleck, a man disregarded by society.",
+      image: "https://thereadyzone.com/wp-content/uploads/2020/01/futur-of-entertainment.jpg"
+  }
+};
+
+document.getElementById("movieSelect").addEventListener("change", function() {
+  const selectedMovie = this.value;
+  const movieDetailsDiv = document.getElementById("movieDetails");
+
+  if (selectedMovie === "default") {
+      movieDetailsDiv.style.display = "block";
+  } else {
+      document.getElementById("movieTitle").innerText = selectedMovie;
+      document.getElementById("movieDescription").innerText = movieData[selectedMovie].description;
+      document.getElementById("movieImage").src = movieData[selectedMovie].image;
+      movieDetailsDiv.style.display = "block";
+  }
+});
+
+
 
 
 
