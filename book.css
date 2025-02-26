@@ -2,9 +2,25 @@
 body{
     background: linear-gradient();
     background: linear-gradient(to right,rgb(47, 47, 91),rgb(0, 0, 0));
-} .container {
+} 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
+
+.container h1{
+    color: white;
+    text-align: center;
+}
+#movieSelect{
+    padding: 5px 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
 #movieDetails {
     width: 80%;
     margin: auto;
@@ -14,6 +30,14 @@ body{
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+}
+#movieDetails h2{
+    color: white;
+    letter-spacing: 2px;
+}
+#movieDetails p{
+    color: white;
+    letter-spacing: 1.5px;
 }
 #movieImage {
     width: 50%;
