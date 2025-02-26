@@ -1,5 +1,11 @@
 
 
+let click = document.querySelector(".userspanicon")
+click.addEventListener('click',()=>{
+  location.href="./sign_up.html"
+})
+
+
 let hamburger = document.querySelector(".hamburger")
 /* Hamburger javascript */
  hamburger.addEventListener('click',()=>{
