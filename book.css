@@ -176,7 +176,7 @@ body{
     left: 0;
     border: 0px solid transparent;
     width: 100%;
-    box-shadow: 0px 10px 20px 4px white;
+    box-shadow: inset 10px 10px 20px 4px white;
 }
 .screen div{
     width: 50%;

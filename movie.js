@@ -30,23 +30,35 @@ let hamburger = document.querySelector(".hamburger")
       header.classList.add('headeractive')
       navlinks.classList.add('activelinks')
       navlinks.classList.add('a_visible'); 
-     
-      
-
   }
-
-//   // Not working 
-//       nav_anchor.forEach((e)=>{
-//       if(e.nav_anchor.classList.contains('a_visible')){
-
-//           e.nav_anchor.classList.remove('a_visible');
-//        }
-//        else{
-//           e.nav_anchor.classList.add('a_visible')
-//        }
-//   })
-
  })
+
+// play button 
+  document.addEventListener('DOMContentLoaded', function () {
+    const playButtons = document.querySelectorAll('.btn-play');
+
+    playButtons.forEach(btn => {
+      btn.addEventListener('mouseenter', function () {
+        btn.classList.add('no-animation');
+      });
+
+      btn.addEventListener('mouseleave', function () {
+        btn.classList.remove('no-animation');
+      });
+    });
+  });
+
+
+//  booknow Function
+ function bookNow(button) {
+  const slide = button.closest('.swiper-slide');
+  const title = slide.getAttribute('data-title');
+  const img = slide.getAttribute('data-img');
+  const url = new URL('book.html', window.location.origin);
+  url.searchParams.set('title', title);
+  url.searchParams.set('img', img);
+  window.location.href = url.toString();
+}
 
   
 
